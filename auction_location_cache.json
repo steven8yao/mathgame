@@ -1,0 +1,92 @@
+{
+  "2050 227th Ave NE, Edmonton, Alberta, T5Y 6H5, Canada": {
+    "geocode": [
+      53.6868482,
+      -113.3317871
+    ],
+    "route": {
+      "Calgary": [
+        240,
+        336.0571,
+        "N"
+      ],
+      "Edmonton": [
+        17,
+        15.2697,
+        "NE"
+      ]
+    }
+  },
+  "691062 Range Rd 214, Athabasca County No. 12, Alberta, T9S 0A8, Canada": {
+    "geocode": [
+      54.962069,
+      -113.1624863
+    ],
+    "route": {
+      "Calgary": [
+        395,
+        500.87390000000005,
+        "N"
+      ],
+      "Edmonton": [
+        174,
+        186.3158,
+        "N"
+      ]
+    }
+  },
+  "Address Coming, Ardrossan, Alberta, Canada": {
+    "geocode": [
+      53.5517087,
+      -113.143322
+    ],
+    "route": {
+      "Calgary": [
+        237,
+        330.8512,
+        "N"
+      ],
+      "Edmonton": [
+        19,
+        22.110400000000002,
+        "E"
+      ]
+    }
+  },
+  "24357 twp rd 352, Red Deer County, Alberta, t0m0y0, Canada": {
+    "geocode": [
+      51.9974524,
+      -113.2406771
+    ],
+    "route": {
+      "Calgary": [
+        130,
+        177.9125,
+        "NE"
+      ],
+      "Edmonton": [
+        169,
+        218.2756,
+        "S"
+      ]
+    }
+  },
+  "., CALGARY, Alberta, T2E6K4, Canada": {
+    "geocode": [
+      51.0456064,
+      -114.057541
+    ],
+    "route": {
+      "Calgary": [
+        14,
+        10.521600000000001,
+        "E"
+      ],
+      "Edmonton": [
+        224,
+        306.6755,
+        "S"
+      ]
+    }
+  }
+}

@@ -1,0 +1,1812 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml" xmlns:og="http://opengraphprotocol.org/schema/">
+<head><link href="css/jquery.thickbox.css" id="linkThickboxCSS" rel="stylesheet" type="text/css"/><link href="https://www.liveauctionworld.com/s/6/graphics/favicon.ico" rel="shortcut icon"/><link href="https://www.liveauctionworld.com/feeds" rel="alternate" title="Live Auction World Upcoming Auctions Feed" type="application/rss+xml"/><script type="text/javascript">var relpath = "https://www.liveauctionworld.com/";</script><link href="https://www.liveauctionworld.com/css/c.min.2507151749.css" rel="stylesheet" type="text/css"/><link href="https://www.liveauctionworld.com/s/6/css/s.min.2507151749.css" rel="stylesheet" type="text/css"/><script src="https://www.liveauctionworld.com/js/jquery-1.4.4.min.js" type="text/javascript"></script><script src="https://www.liveauctionworld.com/js/c.min.2507151749.js" type="text/javascript"></script>
+<meta content="Federal Assets Auctioneers - FAA Mid-July Jewelry &amp; Art Auction - FAA Mid-July Jewelry &amp; Art Auction: 7/15/25 - Camarillo, California" id="cphHead_metaDescription" name="description"/>
+<meta content="Federal Assets Auctioneers, FAA Mid-July Jewelry &amp; Art Auction, FAA Mid-July Jewelry &amp; Art Auction: 7/15/25Camarillo, California, United States auction, catalog, catalogue" id="cphHead_metaKeywords" name="keywords"/>
+<link href="feeds?ae=2294" rel="alternate" title="Upcoming Auctions Feed : 'Federal Assets Auctioneers'" type="application/rss+xml"/>
+<link href="https://www.liveauctionworld.com/FAA-Mid-July-Jewelry-Art-Auction_as109392" rel="canonical"/>
+<script src="js\pages\AuctionSearch.min.2507151749.js" type="text/javascript"></script>
+<script src="js\native.history.2507151749.js" type="text/javascript"></script>
+<script src="js\handlebars.2507151749.js" type="text/javascript"></script>
+<script src="api\js\common.2507151749.js" type="text/javascript"></script>
+<script src="templates\compiled\AuctionItemList.2507151749.js" type="text/javascript"></script>
+<script src="templates\compiled\AuctionItemList_GridView.2507151749.js" type="text/javascript"></script>
+<script src="templates\compiled\CategoriesFilterList.2507151749.js" type="text/javascript"></script>
+<style type="text/css">
+
+        a {
+
+            cursor: pointer;
+
+            text-decoration: underline;
+
+        }
+
+		.demoauction
+
+		{
+
+			float: left;
+
+			height: 100px;
+
+			margin: 25px 0 -125px 65px;
+
+
+
+			color: #FC3;
+
+			font-size: 60pt;
+
+		}
+
+		.boxlink.livenow
+
+		{
+
+			border: none;
+
+			background: #F00000;
+
+			color: #fff;
+
+		}
+
+		.boxlink.livenow:hover {
+
+			border: none;
+
+			background: #FF3030;
+
+		}
+
+        .auction_sessions_noitems {
+
+            display: block;
+
+            margin: 50px 0;
+
+			color: #999;
+
+			text-align:center;
+
+            font-size: 12pt;
+
+        }
+
+        .auction_sessions_noitems strong {
+
+            display: block;
+
+            font-size: 26pt;
+
+        }
+
+        .auction_sessions_embeddedlivestream {
+
+            display: block;
+
+            width: 97%;
+
+            height: 400px;
+
+            margin: 5px auto 10px;
+
+        }
+
+		.auction_sessions_noresults
+
+		{
+
+			margin: 100px 0 200px;
+
+			color: #999;
+
+			text-align:center;
+
+			font-size: 26pt;
+
+		}
+
+		.auction_sessions_noresults span
+
+		{
+
+			display: block;
+
+			font-size: 12pt;
+
+		}
+
+		/****************************************\
+
+			auction sessions/items listing styles
+
+		\****************************************/
+
+		#auction_sessions
+
+		{
+
+			display: block;
+
+		}
+
+		/****************************************/
+
+		#auction_sessions_tabs
+
+		{
+
+            
+
+			height: 49px;
+
+            margin-bottom: 0;
+
+			font-size: 8pt;
+
+		}
+
+		#auction_sessions_tabs li a
+
+		{
+
+			width: 120px;
+
+			height: 41px;
+
+			padding: 5px 0 0;
+
+			white-space: nowrap;
+
+		}
+
+		#auction_sessions_tabs i
+
+		{
+
+			display: block;
+
+			
+
+			font-weight: bold;
+
+		}
+
+		#auction_sessions_tabs span
+
+		{
+
+			display: block;
+
+			
+
+			margin-top: 1px;
+
+			padding: 3px 0 3px 0;
+
+			
+
+			font-weight: bold;
+
+			font-size: 11px;
+
+		}
+
+		#auction_sessions_tabs span.viewall { color: #999; }
+
+		#auction_sessions_tabs span.viewallsub
+
+		{
+
+			display: inline;
+
+			margin-left: 5px;
+
+
+
+			color: #999;
+
+			font-weight: normal;
+
+		}
+
+		#auction_sessions_tabs span.timezone
+
+		{
+
+			display: inline;
+
+			margin-left: 5px;
+
+
+
+			color: #999;
+
+			font-weight: normal;
+
+			font-size: .75em;
+
+		}
+
+		#auction_sessions_tabs span.finished
+
+		{
+
+			color: #999;
+
+		}
+
+		#auction_sessions_tabs span.livenow
+
+		{
+
+			margin-top: 2px;
+
+
+
+			background-image: url(graphics/fades.gif);
+
+			background-position: 0 -68px;
+
+			background-repeat: repeat;
+
+
+
+			background-color: #F90;
+
+
+
+			color: #FFF;
+
+		}
+
+		#auction_sessions_tabs span.upcoming
+
+		{
+
+			color: #F90;
+
+			white-space: nowrap;
+
+			overflow: hidden;
+
+		}
+
+		.auction_sessions_tabs_allsessions {
+
+
+
+		}
+
+		/****************************************/
+
+		#auction_sessions_listcontainer
+
+		{
+
+			min-height: 200px;
+
+			margin: 0 5px 5px 5px;
+
+			padding-top: 5px;
+
+
+
+			border: solid 1px #CCC;
+
+			border-top-width: 0px;
+
+		}
+
+		/****************************************/
+
+		#auction_sessions_pagingtop .pagingbar
+
+		{
+
+			margin-top: 0px;
+
+		}
+
+		/****************************************/
+
+		.search_result_heading
+
+		{
+
+			display:block;
+
+			margin:3px 5px;
+
+			padding:5px;
+
+			border:solid 1px #F90;
+
+			background-color:#FFD;
+
+			color:#333;
+
+
+
+		}
+
+		.search_result_heading a
+
+		{
+
+			float:right;
+
+			text-decoration:none;
+
+		}
+
+		/****************************************\
+
+			sidebar section styling
+
+		\****************************************/
+
+		#auction_action
+
+		{
+
+			padding: 10px;
+
+			
+
+			font-weight: bold;
+
+		}
+
+		#auction_action div
+
+		{
+
+			color: #999;
+
+			font-weight: normal;
+
+			font-size: 8pt;
+
+		}
+
+		#auction_action .boxlink
+
+		{
+
+			height: 16px;
+
+			font-size: 12pt;
+
+		}
+
+		#auction_action span
+
+		{
+
+			display: block;
+
+			margin-bottom: 8px;
+
+			font-size: 12pt;
+
+			color: #666;
+
+		}
+
+		#auction_action span img
+
+		{
+
+			margin: -5px 2px -13px -25px;
+
+		}
+
+		/****************************************/
+
+		#auction_phone_numbers,
+
+		#auction_session_sideinfo
+
+		{
+
+			padding-top: 10px;
+
+			
+
+			color: #666;
+
+			font-weight: bold;
+
+		}
+
+		/****************************************/
+
+		.auction_session_search input[type='text'] { margin-right:3px; }
+
+		.auction_session_search div { margin-bottom:5px; }
+
+		.auction_session_search div:last-child { margin-bottom:0px; }
+
+		.auction_session_search .boxlink { height:22px; padding:4px; font-size:11px; vertical-align:top; }
+
+		.auction_session_search #btnFindLot { width:150px; }
+
+		.auction_session_search #btnSearch { width:78px; }
+
+		.auction_session_search #txtFindLot { width:49px; height:18px; padding:0px 1px; }
+
+		.auction_session_search #txtSearch { width:120px; height:18px; padding:0px 1px; margin:0px}
+
+		.auction_session_search #ddlSearchCategories { width:208px; }
+
+		.auction_session_search #cphBody_ddlSortOrder { width:208px; margin:5px 0px; }
+
+
+
+        #lblHasImage{
+
+            margin-top:5px;
+
+            display:block;
+
+            text-align:left;
+
+            padding-left:10px;
+
+        }
+
+        .ViewMode{
+
+            display:block;
+
+            text-align:right;
+
+            margin-right:5px;
+
+            height: 24px;
+
+        }
+
+        .ViewMode img{
+
+            cursor:pointer;
+
+            margin:0 1px;
+
+            border:thin white solid;
+
+        }
+
+        .ViewMode img:hover{
+
+            border:thin #666 solid;
+
+        }
+
+        .lblChooseLayout{
+
+            vertical-align: super;
+
+            font-weight: normal;
+
+            color: #666;
+
+        }
+
+		.gridView_itemNotificationLink_search, .gridView_itemNotificationLinkNotLoggedIn{
+
+			display:block;
+
+		}
+
+
+
+        .gridView_itemNotificationLink {
+
+            display: inline-block;
+
+        } 
+
+
+
+		.gridView_itemNotificationLink a, .gridView_itemNotificationLink_search a{
+
+			display:inline-block;
+
+			margin: 5px auto 4px;
+
+		    padding: 6px 10px;
+
+			background-color: #666;
+
+			color: #fff;
+
+			text-decoration: none;
+
+		}
+
+		.gridView_itemNotificationLink a:hover, .gridView_itemNotificationLink_search a:hover{
+
+			background-color: rgba(0, 0, 0, 0.75);
+
+			color: #fff;
+
+		}
+
+		.gridView_itemNotificationLink_search a img, .gridView_itemNotificationLink a img{
+
+            display: none;
+
+			width:25px;
+
+			vertical-align:middle;
+
+		}
+
+        .gridView_itemNotificationLinkSubsribed a:before {
+
+/*            content: 'âœ“';
+
+            display: inline-block;
+
+            margin-right: 0.5em;
+
+            font-family: sans-serif;
+
+*/        }
+
+        .otherdetailsbox {
+
+            color: #333;
+
+            background-color: #fff;
+
+            min-height: unset;
+
+            border: .25em solid #f90;
+
+            border-left-width: 2.5em;
+
+            padding: .75em 1em;
+
+            font-size: 1.1em;
+
+            line-height: 1.3;
+
+            font-weight: bold;
+
+        }
+
+        .otherdetailsbox::before {
+
+            content: '';
+
+            float: left;
+
+            background-image: url('graphics/icons/info-circle.png');
+
+            background-repeat: no-repeat;
+
+            background-position: 0 0;
+
+            width: 3em;
+
+            height: 3em;
+
+            margin-left: -3em;
+
+            margin-top: -.5em;
+
+            z-index: 100;
+
+        }
+
+
+
+        .itemslisting-orderIndexGrouping[data-multipleItems] {
+
+            position: relative;
+
+            display: block;
+
+        }
+
+        .itemslisting-orderIndexGrouping[data-multipleItems]::before {
+
+            content: "";
+
+            position: absolute;
+
+            top: 7px;
+
+            bottom: 9px;
+
+            left: -12px;
+
+            width: 5px;
+
+            border: 2px solid #918e8e;
+
+            border-right: none;
+
+        }
+
+		.mediaViewer{
+
+            min-height: 0px !important;
+
+        }
+
+        .divAuctionMedia{
+
+	        max-height: 55px;
+
+        }
+
+	</style>
+<script type="text/javascript">
+
+	    var registrantID = "" == "" ? null : "";
+
+	    var registrantUsername = "" == "" ? null : "";
+
+	    var siteID = "6";
+
+	    var siteName = "Live Auction World";
+
+	    var auctionTitle = "FAA Mid-July Jewelry &amp; Art Auction";
+
+	    var auctionSessionTitle = " - FAA Mid-July Jewelry &amp; Art Auction: 7/15/25";
+
+	    var auctioneerName = "Federal Assets Auctioneers - ";
+
+	    var historyName = "";
+
+	    var siteBaseURL = "https://www.liveauctionworld.com/";
+
+	    var mediaURL = "https://dygtyjqp7pi0m.cloudfront.net/";
+
+	    var accountURL = "https://www.liveauctionworld.com/account/";
+
+	    var searchText = "";
+
+	    var currentPage = 1;
+
+	    var itemsPerPage = 50;
+
+	    var categoryID = null;
+
+	    var sortBy = 1;
+
+	    var auctionID = null;
+
+	    var _auctionID = null;
+
+	    var auctionSessionID = null;
+
+	    var lotNum = null;
+
+	    var itemID = null;
+
+	    var mode_all = null;
+
+	    var friendlyAuctionURL = "https://www.liveauctionworld.com/FAA-Mid-July-Jewelry-Art-Auction_a73509";
+
+	    var hasImage = 0;
+
+	    var viewMode = "1";
+
+
+
+	    function getSearchResults() {
+
+	        //Remove all stop words and invalid characters from the search
+
+	        searchText = "";
+
+	        if($("#txtSearch").length > 0){
+
+	            searchText =  $("#txtSearch").val().length > 0 ? removeIllegalChars($("#txtSearch").val()) : "";
+
+	        }else{
+
+	            searchText = "";
+
+	        }
+
+
+
+	        categoryID = $('#ddlSearchCategories :selected').val() == 0 ? null : $('#ddlSearchCategories :selected').val();
+
+
+
+            // if searching change timed auction sorts to sort by lot order.
+
+            // hack until Search is updated to allow for sorting by timed auction end times
+
+            if (sortBy == 13 || sortBy == 14)
+
+                sortBy = 1;
+
+
+
+	        jQuery.ajaxSetup({ async: false });
+
+	            cloudSearch();
+
+	        jQuery.ajaxSetup({ async: true });
+
+
+
+	        if (itemID == null)
+
+	            window.scrollTo(0, 0);
+
+	        else
+
+	            $('html, body').animate({ scrollTop: $('#i' + itemID).offset().top }, 500);
+
+
+
+            var newHistoryLocation = [
+
+                { key: "p",     val: currentPage },
+
+                { key: "ps",    val: itemsPerPage },
+
+                { key: "a",     val: (mode_all == null ? null : (_auctionID ||  auctionID)) },
+
+                { key: "as",    val: (mode_all != null ? null : auctionSessionID) },
+
+                { key: "ca",    val: categoryID },
+
+                { key: "so",    val: sortBy },
+
+                { key: "q",     val: searchText },
+
+                { key: "m",     val: mode_all },
+
+                { key: "hi",    val: hasImage },
+
+                { key: "vm",    val: viewMode }
+
+            ].reduce(function (prev, curr) {
+
+                return lag.ChangeURLParam(prev, curr.key, curr.val);
+
+            }, document.URL);
+
+
+
+	        History.pushState({ Content: $("#auction_sessions_listcontainer").html() }, historyName, newHistoryLocation);
+
+	        
+
+	        lotNum = null;
+
+	        itemID = null;
+
+		}
+
+
+
+	    //Bind to StateChange Event
+
+	    History.Adapter.bind(window, 'statechange', function () {
+
+	        var State = History.getState();
+
+	        //$.get(State.url, function (response) {
+
+	            $('#auction_sessions_listcontainer').html(State.data.Content);
+
+	            $("#txtSearch").val(lag.GetURLParam('q') == null ? "" : decodeURIComponent(lag.GetURLParam('q')));
+
+	            $("#ddlSearchCategories").val(lag.GetURLParam('ca') == null ? 0 : lag.GetURLParam('ca'));
+
+	            $("#cphBody_ddlSortOrder").val(lag.GetURLParam('so') == null ? 1 : lag.GetURLParam('so'));
+
+	            $("#chkHasImage").attr('checked', lag.GetURLParam('hi') == null ? false : lag.GetURLParam('hi') == 1);
+
+	        //});
+
+	    });
+
+
+
+		$(document).ready(function()
+
+		{
+
+		    //Disabled Cache on Ajax calls
+
+		    $.ajaxSetup({ cache: false });
+
+
+
+            //Load AuctionSession Tabs
+
+            
+
+
+
+		    searchText = lag.GetURLParam('q') == null ? "" : decodeURIComponent(lag.GetURLParam('q'));
+
+		    itemsPerPage = lag.GetURLParam('ps') == null ? 50 : lag.GetURLParam('ps');
+
+		    categoryID = lag.GetURLParam('ca') == null ? null : lag.GetURLParam('ca');
+
+		    sortBy = lag.GetURLParam('so') == null ? 1 : lag.GetURLParam('so');
+
+		    mode_all = lag.GetURLParam('m') == null ? null : "all";
+
+		    hasImage = lag.GetURLParam('hi') == null ? 0 : lag.GetURLParam('hi');
+
+		    currentPage = lag.GetURLParam('p') == null ? 1 : lag.GetURLParam('p');
+
+
+
+		    _auctionID = $.urlAuctionParam();
+
+		    auctionID = lag.GetURLParam('a') || auctionID;
+
+
+
+		    auctionSessionID = $.urlAuctionSessionParam();
+
+			auctionSessionID = auctionSessionID == null ? lag.GetURLParam('as') : auctionSessionID;
+
+
+
+			// build ddlSearchCategories
+
+			var FilterConfig = new function () {
+
+				this.auctionSessionID = auctionSessionID;
+
+				this.auctionID = auctionID || _auctionID;
+
+			}
+
+
+
+			getCategoryFilter(FilterConfig);
+
+
+
+		    jQuery.ajaxSetup({ async: false });
+
+            if (searchText != "" || categoryID != null || hasImage == 1) {
+
+		        //genCategories(); // we used to get filtered categories, no need as it's better to show them all for ux
+
+		        cloudSearch();
+
+		    }
+
+		    jQuery.ajaxSetup({ async: true });
+
+
+
+		    historyName = "FAA Mid-July Jewelry &amp; Art Auction - FAA Mid-July Jewelry &amp; Art Auction: 7/15/25 - Page 1 of 20 - Federal Assets Auctioneers - Live Auction World";
+
+
+
+		    History.replaceState({ Content: $("#auction_sessions_listcontainer").html() }, historyName, document.URL);
+
+
+
+		    //Controls
+
+		    //highlight "searched" lot
+
+			if (window.location.hash && window.location.hash.length > 0)
+
+			    $('#' + window.location.hash.substr(1)).css("border", "solid 2px #000");
+
+
+
+		    //If the sort dropdownlist selection changes, sort items by new value
+
+			$("#cphBody_ddlSortOrder").change(function()
+
+            {
+
+			    if (searchText != "" || categoryID != null) 
+
+			        setSortBy(this.value);
+
+			    else
+
+			        SortItems("https://www.liveauctionworld.com/FAA-Mid-July-Jewelry-Art-Auction_as109392", 50, false, $("#txtSearch").val(), $("#ddlSearchCategories").val(), null, null, $("#cphBody_ddlSortOrder").val());
+
+			});
+
+
+
+		    // setup find lot number events
+
+			$("#txtFindLot").click(function(e){ this.select(); });
+
+
+
+			$("#txtFindLot").keypress(function(e)
+
+			{
+
+			    var keyCode = (window.Event)? e.which : e.keyCode;
+
+			    if(keyCode==13)
+
+			    {
+
+			        FindLot();
+
+				    return false;
+
+				}
+
+			});
+
+		    $("#btnFindLot").click(function()
+
+		    {
+
+		        FindLot();
+
+			});
+
+			
+
+		    // setup search items via keywords events
+
+		    $("#txtSearch").click(function(e){ this.select(); });
+
+		    $("#txtSearch").keypress(function(e)
+
+		    {
+
+		        var keyCode = (window.Event)? e.which : e.keyCode;
+
+		        if(keyCode==13)
+
+		        {
+
+		            $("#btnSearch").click();
+
+		            return false;
+
+		        }
+
+            });
+
+            function auctionpage_search() {
+
+                if ($("#txtSearch").val().length == 0 && $('#ddlSearchCategories :selected').val() == 0 && $("#chkHasImage").attr('checked') == false) {
+
+                    alert("Please enter keywords to search for and/or select a category to filter by, then click search again.");
+
+                    $("#txtSearch").val("");
+
+                }
+
+                else {
+
+                    currentPage = 1;
+
+                    getSearchResults();
+
+                    //genCategories(); // we used to get filtered categories, no need as it's better to show them all for ux
+
+                }
+
+            }
+
+            $("#btnSearch").click(auctionpage_search);
+
+			$("#ddlSearchCategories").change(auctionpage_search);
+
+            $("#item_doc_thumbnails").css("display", "block");
+
+		});
+
+
+
+	    function switchToGridView(){
+
+	        window.location.href = lag.ChangeURLParam(document.URL, "vm", 1);
+
+	    }
+
+	    function switchToListView(){
+
+	        window.location.href = lag.ChangeURLParam(document.URL, "vm", 0);
+
+	    }
+
+
+
+	    $.urlAuctionParam = function () {
+
+	        var splitURL = document.URL.split("?");
+
+	        var indexA = 0;
+
+	        var indexAS = splitURL[0].indexOf("_as");
+
+	        var indexP = splitURL[0].indexOf("_p");
+
+	        var index_ = 0;
+
+	        var endPos = 0;
+
+
+
+            //check for _as first as it will always appear before _a
+
+	        if(indexAS > -1){
+
+                //find _a after _as
+
+	            indexA = splitURL[0].indexOf("_a", indexAS + 3);
+
+	            if(indexA > -1){
+
+	                //_a found. Find length by checking if _ exists after _a
+
+	                index_ = splitURL[0].indexOf("_", indexA + 2);
+
+	                if(index_ > -1)
+
+	                    endPos = index_;    
+
+	                else
+
+	                    endPos = splitURL[0].length
+
+	            }else
+
+	                return null; //_a doesnt exists after _as so is not present                
+
+	        }else{
+
+	            indexA = splitURL[0].indexOf("_a");
+
+	            if(indexA > -1){
+
+	                index_ = splitURL[0].indexOf("_", indexA + 2);
+
+	                if(index_ > -1)
+
+	                    endPos = index_;    
+
+	                else
+
+	                    endPos = splitURL[0].endPos
+
+	            }else
+
+	                return null;
+
+	        }
+
+
+
+	        return splitURL[0].substring(indexA + 2, endPos);
+
+	    }
+
+
+
+	    $.urlAuctionSessionParam = function () {
+
+	        var splitURL = document.URL.split("?");
+
+	        var indexAS = splitURL[0].indexOf("_as");
+
+	        var index_ = 0;
+
+	        var endPos = 0;
+
+
+
+	        //If AS exists, get the length
+
+	        if(indexAS > -1){
+
+	            index_ = splitURL[0].indexOf("_", indexAS + 3);
+
+	            //_ exists after AS
+
+	            if(index_ > -1)
+
+	                endPos = index_;    
+
+	            else
+
+                    endPos = splitURL[0].length
+
+	        }else
+
+	            return null;
+
+
+
+	        return splitURL[0].substring(indexAS + 3, endPos);
+
+	    }
+
+    </script>
+<script type="text/javascript">
+
+        function openLiveStreamPopup(sessionID) {
+
+            window.open('bidlive/media.aspx?f=1&as=' + sessionID, 'livemedia-' + sessionID, 'width=500,height=400');
+
+            $('.auction_sessions_embeddedlivestream').remove();
+
+        }
+
+    </script>
+<script language="javascript" type="text/javascript">$(document).ready(function(){$('#cphBody_ddlSortOrder').val(1);});</script>
+<script type="text/javascript">
+
+	var _qevents = _qevents || [];
+
+	(function() {
+
+		var elem = document.createElement('script'); elem.type = 'text/javascript'; elem.async = true;
+
+		elem.src = ('https:' == document.location.protocol ? 'https://secure' : 'http://edge') + '.quantserve.com/quant.js';
+
+		var scpt = document.getElementsByTagName('script')[0]; scpt.parentNode.insertBefore(elem, scpt);  
+
+	})();
+
+</script>
+<!--GAnalytics--><script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-7438559-2&amp;l=gatagDataLayer"></script>
+<script>window.gatagDataLayer=window.gatagDataLayer||[]; function gatag(){gatagDataLayer.push(arguments);} gatag('js',new Date());
+
+gatag('set', 'linker', {'domains':[
+
+]});gatag('set', 'linker', {'accept_incoming': true});
+
+gatag('config', 'UA-7438559-2');
+
+gatag('event', 'ViewAuction', {'event_category':'www'});</script>
+<script>
+
+!function(f,b,e,v,n,t,s){{if(f.fbq)return;n=f.fbq=function(){{n.callMethod?
+
+n.callMethod.apply(n,arguments):n.queue.push(arguments)}};if(!f._fbq)f._fbq=n;
+
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}}(window,
+
+document,'script','https://connect.facebook.net/en_US/fbevents.js');
+
+fbq('init', '338972392930592');
+
+fbq('init', '425857275818181');
+
+fbq('track', 'PageView');
+
+fbq('trackCustom', 'ViewAuction');
+
+</script>
+<script>(function(w,d,s,l,i){
+
+w[l]=w[l]||[];
+
+w[l].push({'gtm.blacklist':['customScripts']});
+
+w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});
+
+var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';
+
+j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;
+
+f.parentNode.insertBefore(j,f);
+
+})(window,document,'script','dataLayer','GTM-PLD6KKP');</script>
+<script>dataLayer.push({ 'event': 'ViewAuction' })
+
+</script>
+<meta content="Live Auction World" property="og:site_name"/><meta content="https://dygtyjqp7pi0m.cloudfront.net/ae/2294s.png?v=8DDBF0D916B8020" property="og:image"/><title>
+
+	FAA Mid-July Jewelry &amp; Art Auction - FAA Mid-July Jewelry &amp; Art Auction: 7/15/25 - Page 1 of 20 - Federal Assets Auctioneers - Live Auction World
+
+</title></head>
+<body id="body">
+<form action="./FAA-Mid-July-Jewelry-Art-Auction_as109392?as=109392" id="frmMainMaster" method="post">
+<div class="aspNetHidden">
+<input id="__VIEWSTATE" name="__VIEWSTATE" type="hidden" value="bAiPPLZZOFt+Qy5CYKS0ynkes5GpuMZh96RbvSh9OrIvkW+1eoCOeTjYxJP2sBJoW7MEAEU/4zigerzAa1GkYo06/bw="/>
+</div>
+<script src="https://www.liveauctionworld.com/js/controls/ItemsListing.min.js?v=10" type="text/javascript"></script><noscript><img height="1" src="https://www.facebook.com/tr?id=338972392930592&amp;ev=PageView&amp;noscript=1" style="display:none" width="1"/><img height="1" src="https://www.facebook.com/tr?id=425857275818181&amp;ev=PageView&amp;noscript=1" style="display:none" width="1"/></noscript><noscript><iframe height="0" src="//www.googletagmanager.com/ns.html?id=GTM-PLD6KKP" style="display:none;visibility:hidden" width="0"></iframe></noscript>
+<div class="aspNetHidden">
+<input id="__VIEWSTATEGENERATOR" name="__VIEWSTATEGENERATOR" type="hidden" value="10881520"/>
+<input id="__EVENTVALIDATION" name="__EVENTVALIDATION" type="hidden" value="8eWJgCPYGWMFcQ2c3aLoUkaZIA15IgTs+uq+EzyhZyZQhz+RCs0gjacTlAnbsaY2xXA1D69EH3si7hkblGRRK/YY8P6Ov2UE37PqLu6tF4evP+JHe3xsZt+36L/ANfSD+RC30qBTbh6Ji6YtwkELik8q7xoilPAti1CS42fv3Z99p2AIMDlbBc+nAerqU14bkLpxjFJ4IHcfoKDlnexwsdAQRFpMaB9t9+Lne9AcaZsNmFiC1YcF+a30REL24luRsPqQuh5G4O8QMn7dk25ee+dyB/KWLThtTzwGQEH5OdvQNSsTXqhCPjTKr9duyai5zaBl3mw3rJePzWu5Mqv3lxGJq7k="/>
+</div>
+<div id="master">
+<div id="header">
+<div id="header_content">
+<div id="header_logo"><a href="https://www.liveauctionworld.com/" id="aLogo"><img alt="Live Auction World" src="https://www.liveauctionworld.com/s/6/graphics/lawlogo.png"/></a></div>
+<div id="header_search">
+<input class="searchbox" id="txtHomeSearch" onfocus="clearTextBox(this);" onkeypress="if(event.keyCode == 13) { goSearch(this.value); return false; }" placeholder="Search..." type="text"/><a class="searchbutton" onclick="goSearch(document.getElementById('txtHomeSearch').value); return false;"><i class="fa fa-search"></i></a>
+</div>
+<div id="header_userinfo">
+<a class="register" href="https://www.liveauctionworld.com/register.aspx?returnurl=https%3a%2f%2fwww.liveauctionworld.com%2fauction.aspx%3fas%3d109392">create account</a>
+<a class="signin" href="https://www.liveauctionworld.com/login.aspx?returnurl=https%3a%2f%2fwww.liveauctionworld.com%2fauction.aspx%3fas%3d109392">sign in</a>
+</div>
+</div>
+</div>
+<div id="mainmenu">
+<div id="mainmenu_content">
+<nav><ul id="mainmenu_navigation">
+<li><a href="https://www.liveauctionworld.com/">home</a></li>
+<li><a href="https://www.liveauctionworld.com/auctionlist.aspx">browse auctions</a></li>
+<li><a href="https://www.liveauctionworld.com/search.aspx">search lots</a></li>
+<li><a href="https://www.liveauctionworld.com/account/">your account</a></li>
+<li><a href="https://www.liveauctionworld.com/help.aspx">help</a></li>
+<li><a href="https://www.liveauctionworld.com/contact.aspx">contact</a></li>
+<li><a href="https://info.liveauctionworld.com" target="_blank">sellers</a></li>
+</ul></nav>
+<ul id="mainmenu_social">
+<li><a href="https://www.facebook.com/liveauctionworld" target="_blank" title="Become a fan on Facebook"><img alt="Facebook" src="https://www.liveauctionworld.com/graphics/icon_social_facebook.png"/></a></li>
+<li><a href="https://twitter.com/auctiongroup" target="_blank" title="Follow on Twitter"><img alt="Twitter" src="https://www.liveauctionworld.com/graphics/icon_social_twitter.png"/></a></li>
+<li><a href="https://www.instagram.com/liveauctionworld" target="_blank" title="Follow us on Instagram"><img alt="Instagram" src="https://www.liveauctionworld.com/graphics/icon_social_instagram.png"/></a></li>
+<li><a href="https://www.liveauctionworld.com/feeds" target="_blank" title="Upcoming Auctions Feed"><img alt="Feed" src="https://www.liveauctionworld.com/graphics/icon_social_feed.png"/></a></li>
+<li class="newsletter"><a onclick="openNewsletterPopup(); return false;" title="Subscribe to our Newsletter"><img alt="Newsletter" src="https://www.liveauctionworld.com/graphics/button_newsletter.png"/></a></li>
+</ul>
+<div style="clear:both"></div>
+</div>
+</div>
+<div class="mcontainer">
+<div id="content">
+<div class="p_page_content" id="p_auction" itemscope="" itemtype="http://schema.org/SaleEvent">
+<div class="breadcrumbs">
+<b>AUCTION</b>
+<a href="https://www.liveauctionworld.com/Federal-Assets-Auctioneers_ae2294" id="cphBody_hlBreadcrumb_AuctioneerName" itemprop="url" itemscope="" itemtype="http://schema.org/Organization" title="Federal Assets Auctioneers"><span itemprop="name">Federal Assets Auctioneers</span></a>  / 
+
+		<a href="https://www.liveauctionworld.com/FAA-Mid-July-Jewelry-Art-Auction_a73509" id="cphBody_hlBreadcrumb_AuctionTitle" itemprop="url" title="FAA Mid-July Jewelry &amp; Art Auction">FAA Mid-July Jewelry &amp; Art Auction</a>
+</div>
+<h1 class="pageheading" itemprop="name">FAA Mid-July Jewelry &amp; Art Auction</h1>
+<div class="pageheadingsub">
+<span class="part"><b>Auction Currency</b><a href="https://www.google.com/finance?q=CURRENCY:USD" id="cphBody_hlSubBar_AuctionCurrency" target="_blank">USD</a></span>
+<span class="part" itemprop="location" itemscope="" itemtype="http://schema.org/Place"><b itemprop="name">Auction Location</b><a href="https://maps.google.ca/maps?q=725+Via+Alondra%2c+Camarillo%2c+California%2c+93012%2c+United+States" id="cphBody_hlSubBar_AuctionLocation" itemprop="address" itemscope="" itemtype="http://schema.org/PostalAddress" target="_blank"><span itemprop="streetAddress">725 Via Alondra</span>, <span itemprop="addressLocality">Camarillo</span>, <span itemprop="addressRegion">California</span>, <span itemprop="postalCode">93012</span>, <span itemprop="addressCountry">United States</span></a></span>
+<span class="part" id="cphBody_spanSubBar_PreviewInstructions"><b>In Person Preview</b><a class="thickbox" href="auctioninfo.aspx?as=109392&amp;amp;s_preview=true&amp;amp;TB_iframe=true&amp;amp;height=500&amp;amp;width=600" id="cphBody_hlSubBar_PreviewInstructions">7 days</a></span>
+</div>
+<div class="cmain">
+<div class="infobox p-auction-details">
+<h3>Auction Details</h3>
+<div class="infotext" style="height:140px;">
+<span class="contentblock" id="cphBody_cbAuctionDescription" itemprop="description">A curated collection of diamonds, designer jewelry, and investment art awaits-perfect for collectors and casual buyers alike. BID and WIN with FAA!
+<br/></span>
+</div>
+</div>
+<style type="text/css">
+
+	.mediaItem{
+
+		display: block;
+
+		text-align: left;
+
+		margin-left: 30px;
+
+	}	
+
+	.docItem{
+
+		display: block;
+
+		text-align: left;
+
+		margin-left: 30px;
+
+	}
+
+
+
+	.hyperLinkText{
+
+		line-height: 33px;
+
+		vertical-align: bottom;
+
+		display: inline-block; 
+
+		text-decoration: none;
+
+	}
+
+	.divAuctionMedia{
+
+        overflow: hidden;
+
+		transition: max-height 300ms;
+
+		min-height: 0px !important;
+
+		margin-bottom: 0px;
+
+    }
+
+	.open {
+
+		max-height: max-content;
+
+	}
+
+	
+
+</style>
+<script type="text/javascript">
+
+    $(document).ready(function () {
+
+        var b = $(".mediaDocumentToggleButton");
+
+		var w = $(".divAuctionMediaID");
+
+        var eleToChangeButtonText = $(".mediaDocumentContent .mediaDocumentToggleButton, .mediaDocumentContent span.ui-btn-inner.ui-btn-corner-all")
+
+
+
+		b.click(function (e) {
+
+			e.preventDefault();
+
+			w.toggleClass("open"); /* <-- toggle the application of the open class on click */
+
+
+
+			e.currentTarget.innerHTML = w.hasClass("open") ? "Show less..." : "Show more..."; /* <-- change the button text based on the class */
+
+			if (eleToChangeButtonText) {
+
+                eleToChangeButtonText[0].innerText = e.currentTarget.innerHTML;
+
+			}
+
+                
+
+			return false;
+
+        });
+
+	});
+
+
+
+	function toggleMediaContent(e) {
+
+		var w = $("#divAuctionMedia");
+
+
+
+		e.preventDefault();
+
+
+
+		w.toggle();
+
+	}
+
+</script>
+<div id="auction_sessions">
+<div style="margin:0 5px;">
+<ul class="tabs underline" id="auction_sessions_tabs">
+<li class="auction_sessions_tabs_allsessions"><a href="https://www.liveauctionworld.com/FAA-Mid-July-Jewelry-Art-Auction_a73509?m=all" title="View items for all the sessions in this auction."><span class="viewall">All Lots</span><span class="viewallsub">from all the sessions</span></a></li><li class="active"><a content="2025-07-15 07:00:00Z" href="https://www.liveauctionworld.com/FAA-Mid-July-Jewelry-Art-Auction_as109392" itemprop="startDate" title="FAA Mid-July Jewelry &amp; Art Auction: 7/15/25">2025 Jul 15 <br/> 00:00<span class="timezone">UTC-07:00 : PDT/MST</span><span class="livenow">LIVE NOW</span></a></li><li><a content="2025-07-16 07:00:00Z" href="https://www.liveauctionworld.com/FAA-Mid-July-Jewelry-Art-Auction_as109393" itemprop="startDate" title="FAA Mid-July Jewelry &amp; Art Auction: 7/16/25">2025 Jul 16 <br/> 00:00<span class="timezone">UTC-07:00 : PDT/MST</span><span class="upcoming">FAA Mid-July Jewelry &amp; Art Auction: 7/16/25</span></a></li><li><a content="2025-07-17 07:00:00Z" href="https://www.liveauctionworld.com/FAA-Mid-July-Jewelry-Art-Auction_as109440" itemprop="startDate" title="FAA Mid-July Jewelry &amp; Art Auction: 7/17/25">2025 Jul 17 <br/> 00:00<span class="timezone">UTC-07:00 : PDT/MST</span><span class="upcoming">FAA Mid-July Jewelry &amp; Art Auction: 7/17/25</span></a></li>
+</ul>
+</div>
+<div id="auction_sessions_listcontainer">
+<div id="auction_sessions_pagingtop">
+<span id="cphBody_PagingBar_Top"><div class="pagingbar"><span class="pagingbar_prev"></span><span class="pagingbar_size"><small># Rows</small><a class="pagingbar-size-10" href="https://www.liveauctionworld.com/FAA-Mid-July-Jewelry-Art-Auction_as109392?ps=10" rel="nofollow" title="View 10 Results Per Page">10</a><a class="pagingbar-size-20" href="https://www.liveauctionworld.com/FAA-Mid-July-Jewelry-Art-Auction_as109392?ps=20" rel="nofollow" title="View 20 Results Per Page">20</a><a class="pagingbar-size-50 active" href="https://www.liveauctionworld.com/FAA-Mid-July-Jewelry-Art-Auction_as109392?ps=50" rel="nofollow" title="View 50 Results Per Page">50</a><a class="pagingbar-size-100" href="https://www.liveauctionworld.com/FAA-Mid-July-Jewelry-Art-Auction_as109392?ps=100" rel="nofollow" title="View 100 Results Per Page">100</a></span><span class="pagingbar_next"><a href="https://www.liveauctionworld.com/FAA-Mid-July-Jewelry-Art-Auction_as109392_p2">Next &gt;</a></span><span class="pagingbar_pages"><a class="active" href="https://www.liveauctionworld.com/FAA-Mid-July-Jewelry-Art-Auction_as109392">1</a><a href="https://www.liveauctionworld.com/FAA-Mid-July-Jewelry-Art-Auction_as109392_p2">2</a><a href="https://www.liveauctionworld.com/FAA-Mid-July-Jewelry-Art-Auction_as109392_p3">3</a><a href="https://www.liveauctionworld.com/FAA-Mid-July-Jewelry-Art-Auction_as109392_p4">4</a><a href="https://www.liveauctionworld.com/FAA-Mid-July-Jewelry-Art-Auction_as109392_p5">5</a><a href="https://www.liveauctionworld.com/FAA-Mid-July-Jewelry-Art-Auction_as109392_p6">6</a><a href="https://www.liveauctionworld.com/FAA-Mid-July-Jewelry-Art-Auction_as109392_p7">7</a><a href="https://www.liveauctionworld.com/FAA-Mid-July-Jewelry-Art-Auction_as109392_p8">8</a><span>. . .</span><a href="https://www.liveauctionworld.com/FAA-Mid-July-Jewelry-Art-Auction_as109392_p18">18</a><a href="https://www.liveauctionworld.com/FAA-Mid-July-Jewelry-Art-Auction_as109392_p19">19</a><a href="https://www.liveauctionworld.com/FAA-Mid-July-Jewelry-Art-Auction_as109392_p20">20</a></span></div></span>
+<span class="ViewMode" id="cphBody_spanViewMode">
+<span class="lblChooseLayout">Choose Your Layout &gt;</span>
+<img alt="Switch to Grid View" onclick="javascript:switchToGridView()" src="graphics\icons\GridView_24x24.png" title="Switch to Grid View"/>
+<img alt="Switch to List View" onclick="javascript:switchToListView()" src="graphics\icons\ListView_24x24.png" title="Switch to List View"/>
+</span>
+</div>
+<span id="cphBody_ucItemsListing"><script>var lag_ilc_un = '';</script><div class="itemslisting gridView_itemListing" data-sortorder="1" data-timedrefreshcount="10" data-timedsort="0" id="itemslisting"><div class="gridItem" id="i57253268">
+<a class="row_thumbnail" href="https://www.liveauctionworld.com/Vintage-Platinum-4-95-ctw-GIA-Oval-Dark-Blue-Sapphire-w-Old-European-Diamond-Ri_i57253268" title="Vintage Platinum 4.95 ctw GIA Oval Dark Blue Sapphire w/ Old European Diamond Ri"><img alt="Vintage Platinum 4.95 ctw GIA Oval Dark Blue Sapphire w/ Old European Diamond Ri" class="gridView_thumbnail" src="https://dygtyjqp7pi0m.cloudfront.net/i/73509/57253268_1m.jpg?v=8DDC36DE5754D40"/></a><span class="gridView_heading"><a href="https://www.liveauctionworld.com/Vintage-Platinum-4-95-ctw-GIA-Oval-Dark-Blue-Sapphire-w-Old-European-Diamond-Ri_i57253268" title="Vintage Platinum 4.95 ctw GIA Oval Dark Blue Sapphire w/ Old European Diamond Ri"><span class="gridView_title"><i class="gridView_lotnum">1 - </i>Vintage Platinum 4.95 ctw GIA Oval Dark Blue Sapphire w/ Old European Diamond Ri</span></a></span><div class="auctioneer">Federal Assets Auctioneers</div><div class="description gridView_description">A vintage solid platinum ring, with 1 GIA garded oval cut natural sapphire (3.85ct), and 2 old european cut natural diamonds (G/H - VS1/VS2 ; 1.10ctw </div><span class=""><a href="https://www.liveauctionworld.com/livebid.aspx?as=109392" onclick="lag.EmitAnalytics('ClickLive')">Passed</a></span><div class="startpriceestimates">Estimate : 15,000.00 - 17,300.00 </div><div class="gridView_winningbid"> </div><div class="datetime gridView_countdown"> </div><span class="gridView-buttons"><a class="gridView_DetailsButton" href="https://www.liveauctionworld.com/Vintage-Platinum-4-95-ctw-GIA-Oval-Dark-Blue-Sapphire-w-Old-European-Diamond-Ri_i57253268" title="Vintage Platinum 4.95 ctw GIA Oval Dark Blue Sapphire w/ Old European Diamond Ri">Details...</a></span><span class="gridView-buttons"><a class="gridView_BookmarkButton" href="https://www.liveauctionworld.com/login.aspx?returnurl=http%3a%2f%2fwww.liveauctionworld.com%2fauction.aspx%3fas%3d109392" title="Sign-In to Bookmark Lot">Bookmark</a><span class="gridView_itemNotificationLink"></span></span></div><div class="gridItem" id="i57253269">
+<a class="row_thumbnail" href="https://www.liveauctionworld.com/Donald-Trump-45th-President-Fine-Silver-Coin-BUNDLE-5_i57253269" title="Donald Trump 45th President Fine Silver Coin BUNDLE (5)"><img alt="Donald Trump 45th President Fine Silver Coin BUNDLE (5)" class="gridView_thumbnail" src="https://dygtyjqp7pi0m.cloudfront.net/i/73509/57253269_1m.jpg?v=8DDC36DFF85F860"/></a><span class="gridView_heading"><a href="https://www.liveauctionworld.com/Donald-Trump-45th-President-Fine-Silver-Coin-BUNDLE-5_i57253269" title="Donald Trump 45th President Fine Silver Coin BUNDLE (5)"><span class="gridView_title"><i class="gridView_lotnum">2 - </i>Donald Trump 45th President Fine Silver Coin BUNDLE (5)</span></a></span><div class="auctioneer">Federal Assets Auctioneers</div><div class="description gridView_description">This bundle features five 1oz .999 fine silver coins showcasing a detailed profile of the 45th President, Donald J. Trump. Perfect for collectors and </div><span class=""><a href="https://www.liveauctionworld.com/livebid.aspx?as=109392" onclick="lag.EmitAnalytics('ClickLive')">Sold</a></span><div class="startpriceestimates">Estimate : 600.00 - 700.00 </div><div class="gridView_winningbid linkinfo bidinfo" title="(Hammer Price) = Total">Sold to floor for 400.00</div><div class="datetime gridView_countdown"> </div><span class="gridView-buttons"><a class="gridView_DetailsButton" href="https://www.liveauctionworld.com/Donald-Trump-45th-President-Fine-Silver-Coin-BUNDLE-5_i57253269" title="Donald Trump 45th President Fine Silver Coin BUNDLE (5)">Details...</a></span><span class="gridView-buttons"><a class="gridView_BookmarkButton" href="https://www.liveauctionworld.com/login.aspx?returnurl=http%3a%2f%2fwww.liveauctionworld.com%2fauction.aspx%3fas%3d109392" title="Sign-In to Bookmark Lot">Bookmark</a><span class="gridView_itemNotificationLink"></span></span></div><div class="gridItem" id="i57253270">
+
+<a class="row_thumbnail" href="https://www.liveauctionworld.com/Winchester-by-Michael-Bryan_i57253270" title="Winchester by Michael Bryan"><img alt="Winchester by Michael Bryan" class="gridView_thumbnail" src="https://dygtyjqp7pi0m.cloudfront.net/i/73509/57253270_1m.jpg?v=8DDC36E3310B3F0"/></a><span class="gridView_heading"><a href="https://www.liveauctionworld.com/Winchester-by-Michael-Bryan_i57253270" title="Winchester by Michael Bryan"><span class="gridView_title"><i class="gridView_lotnum">3 - </i>Winchester by Michael Bryan</span></a></span><div class="auctioneer">Federal Assets Auctioneers</div><div class="description gridView_description">A lover of Classic Westerns from TV &amp; movies, Michael Bryan has created this 23x40" handworked giclee on canvas, numbered 1/1 Unique.</div><span class=""><a href="https://www.liveauctionworld.com/livebid.aspx?as=109392" onclick="lag.EmitAnalytics('ClickLive')">Passed</a></span><div class="startpriceestimates">Estimate : 3,500.00 - 4,100.00 </div><div class="gridView_winningbid"> </div><div class="datetime gridView_countdown"> </div><span class="gridView-buttons"><a class="gridView_DetailsButton" href="https://www.liveauctionworld.com/Winchester-by-Michael-Bryan_i57253270" title="Winchester by Michael Bryan">Details...</a></span><span class="gridView-buttons"><a class="gridView_BookmarkButton" href="https://www.liveauctionworld.com/login.aspx?returnurl=http%3a%2f%2fwww.liveauctionworld.com%2fauction.aspx%3fas%3d109392" title="Sign-In to Bookmark Lot">Bookmark</a><span class="gridView_itemNotificationLink"></span></span></div><div class="gridItem" id="i57253271">
+	
+<a class="row_thumbnail" href="https://www.liveauctionworld.com/Family-Retreat-by-Pino-1939-2010_i57253271" title="Family Retreat by Pino (1939-2010)"><img alt="Family Retreat by Pino (1939-2010)" class="gridView_thumbnail" src="https://dygtyjqp7pi0m.cloudfront.net/i/73509/57253271_1m.jpg?v=8DDC36E5E68E4F0"/></a><span class="gridView_heading"><a href="https://www.liveauctionworld.com/Family-Retreat-by-Pino-1939-2010_i57253271" title="Family Retreat by Pino (1939-2010)"><span class="gridView_title"><i class="gridView_lotnum">4 - </i>Family Retreat by Pino (1939-2010)</span></a></span><div class="auctioneer">Federal Assets Auctioneers</div><div class="description gridView_description">"Family Retreat" is an hand embellished limited edition giclee on canvas by Pino (1939-2010) numbered and hand signed by the artist. Inclu...</div><span class=""><a href="https://www.liveauctionworld.com/livebid.aspx?as=109392" onclick="lag.EmitAnalytics('ClickLive')">Sold</a></span><div class="startpriceestimates">Estimate : 1,800.00 - 2,000.00 </div><div class="gridView_winningbid linkinfo bidinfo" title="(Hammer Price) = Total">Sold to floor for 1,600.00</div><div class="datetime gridView_countdown"> </div><span class="gridView-buttons"><a class="gridView_DetailsButton" href="https://www.liveauctionworld.com/Family-Retreat-by-Pino-1939-2010_i57253271" title="Family Retreat by Pino (1939-2010)">Details...</a></span><span class="gridView-buttons"><a class="gridView_BookmarkButton" href="https://www.liveauctionworld.com/login.aspx?returnurl=http%3a%2f%2fwww.liveauctionworld.com%2fauction.aspx%3fas%3d109392" title="Sign-In to Bookmark Lot">Bookmark</a><span class="gridView_itemNotificationLink"></span></span></div><div class="gridItem" id="i57253272">
+<a class="row_thumbnail" href="https://www.liveauctionworld.com/Pool-Room-by-Leroy-Neiman_i57253272" title="Pool Room by Leroy Neiman"><img alt="Pool Room by Leroy Neiman" class="gridView_thumbnail" src="https://dygtyjqp7pi0m.cloudfront.net/i/73509/57253272_1m.jpg?v=8DDC36E9B4AD4F0"/></a><span class="gridView_heading"><a href="https://www.liveauctionworld.com/Pool-Room-by-Leroy-Neiman_i57253272" title="Pool Room by Leroy Neiman"><span class="gridView_title"><i class="gridView_lotnum">5 - </i>Pool Room by Leroy Neiman</span></a></span><div class="auctioneer">Federal Assets Auctioneers</div><div class="description gridView_description">"Pool Room" - This item is hand signed by the artist LeRoy Neiman - Limited Edition Serigraph #239 of 350 - Framed size = 33" x 36&amp;qu...</div><span class=""><a href="https://www.liveauctionworld.com/livebid.aspx?as=109392" onclick="lag.EmitAnalytics('ClickLive')">Sold</a></span><div class="startpriceestimates">Estimate : 5,500.00 - 6,400.00 </div><div class="gridView_winningbid linkinfo bidinfo" title="(Hammer Price) = Total">Sold to floor for 3,750.00</div><div class="datetime gridView_countdown"> </div><span class="gridView-buttons"><a class="gridView_DetailsButton" href="https://www.liveauctionworld.com/Pool-Room-by-Leroy-Neiman_i57253272" title="Pool Room by Leroy Neiman">Details...</a></span><span class="gridView-buttons"><a class="gridView_BookmarkButton" href="https://www.liveauctionworld.com/login.aspx?returnurl=http%3a%2f%2fwww.liveauctionworld.com%2fauction.aspx%3fas%3d109392" title="Sign-In to Bookmark Lot">Bookmark</a><span class="gridView_itemNotificationLink"></span></span></div><div class="gridItem" id="i57253273">
+<a class="row_thumbnail" href="https://www.liveauctionworld.com/Donald-Trump-1oz-999-Fine-Silver-Coin-Assorted-SET-3_i57253273" title="Donald Trump 1oz .999 Fine Silver Coin Assorted SET (3)"><img alt="Donald Trump 1oz .999 Fine Silver Coin Assorted SET (3)" class="gridView_thumbnail" src="https://dygtyjqp7pi0m.cloudfront.net/i/73509/57253273_1m.jpg?v=8DDC36EEA603170"/></a><span class="gridView_heading"><a href="https://www.liveauctionworld.com/Donald-Trump-1oz-999-Fine-Silver-Coin-Assorted-SET-3_i57253273" title="Donald Trump 1oz .999 Fine Silver Coin Assorted SET (3)"><span class="gridView_title"><i class="gridView_lotnum">6 - </i>Donald Trump 1oz .999 Fine Silver Coin Assorted SET (3)</span></a></span><div class="auctioneer">Federal Assets Auctioneers</div><div class="description gridView_description">This Donald Trump 1oz .999 Fine Silver Coin Assorted Set features three unique designs honoring the 45th President: the presidential profile, the &amp;q...</div><span class=""><a href="https://www.liveauctionworld.com/livebid.aspx?as=109392" onclick="lag.EmitAnalytics('ClickLive')">Sold</a></span><div class="startpriceestimates">Estimate : 400.00 - 500.00 </div><div class="gridView_winningbid linkinfo bidinfo" title="(Hammer Price) = Total">Sold to floor for 375.00</div><div class="datetime gridView_countdown"> </div><span class="gridView-buttons"><a class="gridView_DetailsButton" href="https://www.liveauctionworld.com/Donald-Trump-1oz-999-Fine-Silver-Coin-Assorted-SET-3_i57253273" title="Donald Trump 1oz .999 Fine Silver Coin Assorted SET (3)">Details...</a></span><span class="gridView-buttons"><a class="gridView_BookmarkButton" href="https://www.liveauctionworld.com/login.aspx?returnurl=http%3a%2f%2fwww.liveauctionworld.com%2fauction.aspx%3fas%3d109392" title="Sign-In to Bookmark Lot">Bookmark</a><span class="gridView_itemNotificationLink"></span></span></div><div class="gridItem" id="i57253274">
+<a class="row_thumbnail" href="https://www.liveauctionworld.com/Platinum-GIA-NO-HEAT-Cushion-Sapphire-Solitaire-w-Diamond-Halo-Engagement-Ring_i57253274" title="Platinum GIA NO HEAT Cushion Sapphire Solitaire w/ Diamond Halo Engagement Ring"><img alt="Platinum GIA NO HEAT Cushion Sapphire Solitaire w/ Diamond Halo Engagement Ring" class="gridView_thumbnail" src="https://dygtyjqp7pi0m.cloudfront.net/i/73509/57253274_1m.jpg?v=8DDC36F4CC14840"/></a><span class="gridView_heading"><a href="https://www.liveauctionworld.com/Platinum-GIA-NO-HEAT-Cushion-Sapphire-Solitaire-w-Diamond-Halo-Engagement-Ring_i57253274" title="Platinum GIA NO HEAT Cushion Sapphire Solitaire w/ Diamond Halo Engagement Ring"><span class="gridView_title"><i class="gridView_lotnum">7 - </i>Platinum GIA NO HEAT Cushion Sapphire Solitaire w/ Diamond Halo Engagement Ring</span></a></span><div class="auctioneer">Federal Assets Auctioneers</div><div class="description gridView_description">A solid platinum engagement ring, with 1 GIA graded cushion cut natural sapphire (NO HEAT - 1.37ct ), and a halo of 90 round brilliant cut natural dia</div><span class=""><a href="https://www.liveauctionworld.com/livebid.aspx?as=109392" onclick="lag.EmitAnalytics('ClickLive')">Passed</a></span><div class="startpriceestimates">Estimate : 11,500.00 - 13,300.00 </div><div class="gridView_winningbid"> </div><div class="datetime gridView_countdown"> </div><span class="gridView-buttons"><a class="gridView_DetailsButton" href="https://www.liveauctionworld.com/Platinum-GIA-NO-HEAT-Cushion-Sapphire-Solitaire-w-Diamond-Halo-Engagement-Ring_i57253274" title="Platinum GIA NO HEAT Cushion Sapphire Solitaire w/ Diamond Halo Engagement Ring">Details...</a></span><span class="gridView-buttons"><a class="gridView_BookmarkButton" href="https://www.liveauctionworld.com/login.aspx?returnurl=http%3a%2f%2fwww.liveauctionworld.com%2fauction.aspx%3fas%3d109392" title="Sign-In to Bookmark Lot">Bookmark</a><span class="gridView_itemNotificationLink"></span></span></div><div class="gridItem" id="i57253275">
+<a class="row_thumbnail" href="https://www.liveauctionworld.com/Cincinnati-Reds-Pete-Rose-Autographed-Jersey-With-Stats_i57253275" title="Cincinnati Reds Pete Rose Autographed Jersey With Stats"><img alt="Cincinnati Reds Pete Rose Autographed Jersey With Stats" class="gridView_thumbnail" src="https://dygtyjqp7pi0m.cloudfront.net/i/73509/57253275_1m.jpg?v=8DDC36F8326E930"/></a><span class="gridView_heading"><a href="https://www.liveauctionworld.com/Cincinnati-Reds-Pete-Rose-Autographed-Jersey-With-Stats_i57253275" title="Cincinnati Reds Pete Rose Autographed Jersey With Stats"><span class="gridView_title"><i class="gridView_lotnum">8 - </i>Cincinnati Reds Pete Rose Autographed Jersey With Stats</span></a></span><div class="auctioneer">Federal Assets Auctioneers</div><div class="description gridView_description">Cincinnati Reds Pete Rose Autographed Jersey With Stats. Pete Rose had 4256 hits in his 24 year career with the Reds, Phillies, and the Expos. Pete wo</div><span class=""><a href="https://www.liveauctionworld.com/livebid.aspx?as=109392" onclick="lag.EmitAnalytics('ClickLive')">Sold</a></span><div class="startpriceestimates">Estimate : 1,000.00 - 1,200.00 </div><div class="gridView_winningbid linkinfo bidinfo" title="(Hammer Price) = Total">Sold to floor for 800.00</div><div class="datetime gridView_countdown"> </div><span class="gridView-buttons"><a class="gridView_DetailsButton" href="https://www.liveauctionworld.com/Cincinnati-Reds-Pete-Rose-Autographed-Jersey-With-Stats_i57253275" title="Cincinnati Reds Pete Rose Autographed Jersey With Stats">Details...</a></span><span class="gridView-buttons"><a class="gridView_BookmarkButton" href="https://www.liveauctionworld.com/login.aspx?returnurl=http%3a%2f%2fwww.liveauctionworld.com%2fauction.aspx%3fas%3d109392" title="Sign-In to Bookmark Lot">Bookmark</a><span class="gridView_itemNotificationLink"></span></span></div><div class="gridItem" id="i57253276">
+<a class="row_thumbnail" href="https://www.liveauctionworld.com/Tiger-by-Steve-Kaufman-1960-2010_i57253276" title="Tiger by Steve Kaufman (1960-2010)"><img alt="Tiger by Steve Kaufman (1960-2010)" class="gridView_thumbnail" src="https://dygtyjqp7pi0m.cloudfront.net/i/73509/57253276_1m.jpg?v=8DDC36F9ECB7AC0"/></a><span class="gridView_heading"><a href="https://www.liveauctionworld.com/Tiger-by-Steve-Kaufman-1960-2010_i57253276" title="Tiger by Steve Kaufman (1960-2010)"><span class="gridView_title"><i class="gridView_lotnum">9 - </i>Tiger by Steve Kaufman (1960-2010)</span></a></span><div class="auctioneer">Federal Assets Auctioneers</div><div class="description gridView_description">"Tiger" is a hand painted plate by Steve Kaufman (1960-2010). This piece is hand signed by the artist and includes a letter of authenticit...</div><span class=""><a href="https://www.liveauctionworld.com/livebid.aspx?as=109392" onclick="lag.EmitAnalytics('ClickLive')">Sold</a></span><div class="startpriceestimates">Estimate : 1,400.00 - 1,700.00 </div><div class="gridView_winningbid linkinfo bidinfo" title="(Hammer Price) = Total">Sold to floor for 1,200.00</div><div class="datetime gridView_countdown"> </div><span class="gridView-buttons"><a class="gridView_DetailsButton" href="https://www.liveauctionworld.com/Tiger-by-Steve-Kaufman-1960-2010_i57253276" title="Tiger by Steve Kaufman (1960-2010)">Details...</a></span><span class="gridView-buttons"><a class="gridView_BookmarkButton" href="https://www.liveauctionworld.com/login.aspx?returnurl=http%3a%2f%2fwww.liveauctionworld.com%2fauction.aspx%3fas%3d109392" title="Sign-In to Bookmark Lot">Bookmark</a><span class="gridView_itemNotificationLink"></span></span></div><div class="gridItem" id="i57253277">
+<a class="row_thumbnail" href="https://www.liveauctionworld.com/Donald-Trump-Mugshot-1oz-999-Fine-Silver-Coin_i57253277" title="Donald Trump Mugshot 1oz .999 Fine Silver Coin"><img alt="Donald Trump Mugshot 1oz .999 Fine Silver Coin" class="gridView_thumbnail" src="https://dygtyjqp7pi0m.cloudfront.net/i/73509/57253277_1m.jpg?v=8DDC36FB4FB4230"/></a><span class="gridView_heading"><a href="https://www.liveauctionworld.com/Donald-Trump-Mugshot-1oz-999-Fine-Silver-Coin_i57253277" title="Donald Trump Mugshot 1oz .999 Fine Silver Coin"><span class="gridView_title"><i class="gridView_lotnum">10 - </i>Donald Trump Mugshot 1oz .999 Fine Silver Coin</span></a></span><div class="auctioneer">Federal Assets Auctioneers</div><div class="description gridView_description">This Donald Trump Mugshot 1oz .999 Fine Silver Coin features a bold depiction of Trump in a mugshot-style design, complete with height markings and th</div><span class=""><a href="https://www.liveauctionworld.com/livebid.aspx?as=109392" onclick="lag.EmitAnalytics('ClickLive')">Sold</a></span><div class="startpriceestimates">Estimate : 200.00 - 300.00 </div><div class="gridView_winningbid linkinfo bidinfo" title="(Hammer Price) = Total">Sold to floor for 100.00</div><div class="datetime gridView_countdown"> </div><span class="gridView-buttons"><a class="gridView_DetailsButton" href="https://www.liveauctionworld.com/Donald-Trump-Mugshot-1oz-999-Fine-Silver-Coin_i57253277" title="Donald Trump Mugshot 1oz .999 Fine Silver Coin">Details...</a></span><span class="gridView-buttons"><a class="gridView_BookmarkButton" href="https://www.liveauctionworld.com/login.aspx?returnurl=http%3a%2f%2fwww.liveauctionworld.com%2fauction.aspx%3fas%3d109392" title="Sign-In to Bookmark Lot">Bookmark</a><span class="gridView_itemNotificationLink"></span></span></div><div class="gridItem" id="i57253278">
+<a class="row_thumbnail" href="https://www.liveauctionworld.com/Alone-with-Our-Hearts-by-Coleman-James_i57253278" title="Alone with Our Hearts by Coleman James"><img alt="Alone with Our Hearts by Coleman James" class="gridView_thumbnail" src="https://dygtyjqp7pi0m.cloudfront.net/i/73509/57253278_1m.jpg?v=8DDC36FD67D4AC0"/></a><span class="gridView_heading"><a href="https://www.liveauctionworld.com/Alone-with-Our-Hearts-by-Coleman-James_i57253278" title="Alone with Our Hearts by Coleman James"><span class="gridView_title"><i class="gridView_lotnum">11 - </i>Alone with Our Hearts by Coleman James</span></a></span><div class="auctioneer">Federal Assets Auctioneers</div><div class="description gridView_description">"Alone with Our Hearts" is a limited edition lithograph on paper by James Coleman numbered and hand signed by the artist. Includes Letter ...</div><span class=""><a href="https://www.liveauctionworld.com/livebid.aspx?as=109392" onclick="lag.EmitAnalytics('ClickLive')">Sold</a></span><div class="startpriceestimates">Estimate : 300.00 - 400.00 </div><div class="gridView_winningbid linkinfo bidinfo" title="(Hammer Price) = Total">Sold to floor for 225.00</div><div class="datetime gridView_countdown"> </div><span class="gridView-buttons"><a class="gridView_DetailsButton" href="https://www.liveauctionworld.com/Alone-with-Our-Hearts-by-Coleman-James_i57253278" title="Alone with Our Hearts by Coleman James">Details...</a></span><span class="gridView-buttons"><a class="gridView_BookmarkButton" href="https://www.liveauctionworld.com/login.aspx?returnurl=http%3a%2f%2fwww.liveauctionworld.com%2fauction.aspx%3fas%3d109392" title="Sign-In to Bookmark Lot">Bookmark</a><span class="gridView_itemNotificationLink"></span></span></div><div class="gridItem" id="i57253279">
+<a class="row_thumbnail" href="https://www.liveauctionworld.com/18K-Yellow-Gold-Carved-Quartz-Pendant-by-Carlo-Rici_i57253279" title="18K Yellow Gold &amp; Carved Quartz Pendant by Carlo Rici"><img alt="18K Yellow Gold &amp; Carved Quartz Pendant by Carlo Rici" class="gridView_thumbnail" src="https://dygtyjqp7pi0m.cloudfront.net/i/73509/57253279_1m.jpg?v=8DDC36FEC127FE0"/></a><span class="gridView_heading"><a href="https://www.liveauctionworld.com/18K-Yellow-Gold-Carved-Quartz-Pendant-by-Carlo-Rici_i57253279" title="18K Yellow Gold &amp; Carved Quartz Pendant by Carlo Rici"><span class="gridView_title"><i class="gridView_lotnum">12 - </i>18K Yellow Gold &amp; Carved Quartz Pendant by Carlo Rici</span></a></span><div class="auctioneer">Federal Assets Auctioneers</div><div class="description gridView_description">18K Yellow Gold &amp; Carved Quartz Pendant by Carlo Rici containing one oval ruby weighing approximately 0.30 cts. Total weight is 34 gm. Estimated...</div><span class=""><a href="https://www.liveauctionworld.com/livebid.aspx?as=109392" onclick="lag.EmitAnalytics('ClickLive')">Sold</a></span><div class="startpriceestimates">Estimate : 900.00 - 1,100.00 </div><div class="gridView_winningbid linkinfo bidinfo" title="(Hammer Price) = Total">Sold to floor for 750.00</div><div class="datetime gridView_countdown"> </div><span class="gridView-buttons"><a class="gridView_DetailsButton" href="https://www.liveauctionworld.com/18K-Yellow-Gold-Carved-Quartz-Pendant-by-Carlo-Rici_i57253279" title="18K Yellow Gold &amp; Carved Quartz Pendant by Carlo Rici">Details...</a></span><span class="gridView-buttons"><a class="gridView_BookmarkButton" href="https://www.liveauctionworld.com/login.aspx?returnurl=http%3a%2f%2fwww.liveauctionworld.com%2fauction.aspx%3fas%3d109392" title="Sign-In to Bookmark Lot">Bookmark</a><span class="gridView_itemNotificationLink"></span></span></div><div class="gridItem" id="i57253280">
+<a class="row_thumbnail" href="https://www.liveauctionworld.com/SLASH-This-By-Robert-M-Knight_i57253280" title="SLASH This By Robert M Knight"><img alt="SLASH This By Robert M Knight" class="gridView_thumbnail" src="https://dygtyjqp7pi0m.cloudfront.net/i/73509/57253280_1m.jpg?v=8DDC3701316E720"/></a><span class="gridView_heading"><a href="https://www.liveauctionworld.com/SLASH-This-By-Robert-M-Knight_i57253280" title="SLASH This By Robert M Knight"><span class="gridView_title"><i class="gridView_lotnum">13 - </i>SLASH This By Robert M Knight</span></a></span><div class="auctioneer">Federal Assets Auctioneers</div><div class="description gridView_description">Guns N' Roses guitarist SLASH  shows off one of his favorite guitars for renowned Rock photographer Robert M. Knight . Glossy 14x11 print.</div><span class=""><a href="https://www.liveauctionworld.com/livebid.aspx?as=109392" onclick="lag.EmitAnalytics('ClickLive')">Passed</a></span><div class="startpriceestimates">Estimate : 700.00 - 900.00 </div><div class="gridView_winningbid"> </div><div class="datetime gridView_countdown"> </div><span class="gridView-buttons"><a class="gridView_DetailsButton" href="https://www.liveauctionworld.com/SLASH-This-By-Robert-M-Knight_i57253280" title="SLASH This By Robert M Knight">Details...</a></span><span class="gridView-buttons"><a class="gridView_BookmarkButton" href="https://www.liveauctionworld.com/login.aspx?returnurl=http%3a%2f%2fwww.liveauctionworld.com%2fauction.aspx%3fas%3d109392" title="Sign-In to Bookmark Lot">Bookmark</a><span class="gridView_itemNotificationLink"></span></span></div><div class="gridItem" id="i57253281">
+<a class="row_thumbnail" href="https://www.liveauctionworld.com/Donald-Trump-1oz-999-Fine-Silver-Coin-Assorted-SET-3_i57253281" title="Donald Trump 1oz .999 Fine Silver Coin Assorted SET (3)"><img alt="Donald Trump 1oz .999 Fine Silver Coin Assorted SET (3)" class="gridView_thumbnail" src="https://dygtyjqp7pi0m.cloudfront.net/i/73509/57253281_1m.jpg?v=8DDC370327D3BA0"/></a><span class="gridView_heading"><a href="https://www.liveauctionworld.com/Donald-Trump-1oz-999-Fine-Silver-Coin-Assorted-SET-3_i57253281" title="Donald Trump 1oz .999 Fine Silver Coin Assorted SET (3)"><span class="gridView_title"><i class="gridView_lotnum">14 - </i>Donald Trump 1oz .999 Fine Silver Coin Assorted SET (3)</span></a></span><div class="auctioneer">Federal Assets Auctioneers</div><div class="description gridView_description">This Donald Trump 1oz .999 Fine Silver Coin Assorted Set features three unique designs honoring the 45th President: the presidential profile, the &amp;q...</div><span class=""><a href="https://www.liveauctionworld.com/livebid.aspx?as=109392" onclick="lag.EmitAnalytics('ClickLive')">Sold</a></span><div class="startpriceestimates">Estimate : 400.00 - 500.00 </div><div class="gridView_winningbid linkinfo bidinfo" title="(Hammer Price) = Total">Sold to floor for 275.00</div><div class="datetime gridView_countdown"> </div><span class="gridView-buttons"><a class="gridView_DetailsButton" href="https://www.liveauctionworld.com/Donald-Trump-1oz-999-Fine-Silver-Coin-Assorted-SET-3_i57253281" title="Donald Trump 1oz .999 Fine Silver Coin Assorted SET (3)">Details...</a></span><span class="gridView-buttons"><a class="gridView_BookmarkButton" href="https://www.liveauctionworld.com/login.aspx?returnurl=http%3a%2f%2fwww.liveauctionworld.com%2fauction.aspx%3fas%3d109392" title="Sign-In to Bookmark Lot">Bookmark</a><span class="gridView_itemNotificationLink"></span></span></div><div class="gridItem" id="i57253282">
+<a class="row_thumbnail" href="https://www.liveauctionworld.com/Cafe-d-Le-Stable-by-Park-S-Sam_i57253282" title="Cafe d'Le Stable by Park, S. Sam"><img alt="Cafe d'Le Stable by Park, S. Sam" class="gridView_thumbnail" src="https://dygtyjqp7pi0m.cloudfront.net/i/73509/57253282_1m.jpg?v=8DDC3704BE68330"/></a><span class="gridView_heading"><a href="https://www.liveauctionworld.com/Cafe-d-Le-Stable-by-Park-S-Sam_i57253282" title="Cafe d'Le Stable by Park, S. Sam"><span class="gridView_title"><i class="gridView_lotnum">15 - </i>Cafe d'Le Stable by Park, S. Sam</span></a></span><div class="auctioneer">Federal Assets Auctioneers</div><div class="description gridView_description">"Cafe d'Le Stable" is a hand embellished limited edition printer's proof on stretched canvas by Sam Park, numbered 1/1 and hand si...</div><span class=""><a href="https://www.liveauctionworld.com/livebid.aspx?as=109392" onclick="lag.EmitAnalytics('ClickLive')">Sold</a></span><div class="startpriceestimates">Estimate : 700.00 - 900.00 </div><div class="gridView_winningbid linkinfo bidinfo" title="(Hammer Price) = Total">Sold to floor for 550.00</div><div class="datetime gridView_countdown"> </div><span class="gridView-buttons"><a class="gridView_DetailsButton" href="https://www.liveauctionworld.com/Cafe-d-Le-Stable-by-Park-S-Sam_i57253282" title="Cafe d'Le Stable by Park, S. Sam">Details...</a></span><span class="gridView-buttons"><a class="gridView_BookmarkButton" href="https://www.liveauctionworld.com/login.aspx?returnurl=http%3a%2f%2fwww.liveauctionworld.com%2fauction.aspx%3fas%3d109392" title="Sign-In to Bookmark Lot">Bookmark</a><span class="gridView_itemNotificationLink"></span></span></div><div class="gridItem" id="i57253283">
+<a class="row_thumbnail" href="https://www.liveauctionworld.com/NEW-Classic-18k-White-Gold-5-25mm-Pearl-0-40-ctw-Round-Diamond-Flower-Cluster-Ri_i57253283" title="NEW Classic 18k White Gold 5.25mm Pearl 0.40 ctw Round Diamond Flower Cluster Ri"><img alt="NEW Classic 18k White Gold 5.25mm Pearl 0.40 ctw Round Diamond Flower Cluster Ri" class="gridView_thumbnail" src="https://dygtyjqp7pi0m.cloudfront.net/i/73509/57253283_1m.jpg?v=8DDC370B6F45DA0"/></a><span class="gridView_heading"><a href="https://www.liveauctionworld.com/NEW-Classic-18k-White-Gold-5-25mm-Pearl-0-40-ctw-Round-Diamond-Flower-Cluster-Ri_i57253283" title="NEW Classic 18k White Gold 5.25mm Pearl 0.40 ctw Round Diamond Flower Cluster Ri"><span class="gridView_title"><i class="gridView_lotnum">16 - </i>NEW Classic 18k White Gold 5.25mm Pearl 0.40 ctw Round Diamond Flower Cluster Ri</span></a></span><div class="auctioneer">Federal Assets Auctioneers</div><div class="description gridView_description">A new solid 18k white gold ring, with 1 round shape cultured pearl (5.25mm), surrounded with 8 round brilliant cut natural diamonds (G/H  - VS1/VS2 ; </div><span class=""><a href="https://www.liveauctionworld.com/livebid.aspx?as=109392" onclick="lag.EmitAnalytics('ClickLive')">Sold</a></span><div class="startpriceestimates">Estimate : 1,500.00 - 1,700.00 </div><div class="gridView_winningbid linkinfo bidinfo" title="(Hammer Price) = Total">Sold to floor for 1,500.00</div><div class="datetime gridView_countdown"> </div><span class="gridView-buttons"><a class="gridView_DetailsButton" href="https://www.liveauctionworld.com/NEW-Classic-18k-White-Gold-5-25mm-Pearl-0-40-ctw-Round-Diamond-Flower-Cluster-Ri_i57253283" title="NEW Classic 18k White Gold 5.25mm Pearl 0.40 ctw Round Diamond Flower Cluster Ri">Details...</a></span><span class="gridView-buttons"><a class="gridView_BookmarkButton" href="https://www.liveauctionworld.com/login.aspx?returnurl=http%3a%2f%2fwww.liveauctionworld.com%2fauction.aspx%3fas%3d109392" title="Sign-In to Bookmark Lot">Bookmark</a><span class="gridView_itemNotificationLink"></span></span></div><div class="gridItem" id="i57253284">
+<a class="row_thumbnail" href="https://www.liveauctionworld.com/Cincinnati-Reds-Pete-Rose-Autographed-Jersey-With-Stats_i57253284" title="Cincinnati Reds Pete Rose Autographed Jersey With Stats"><img alt="Cincinnati Reds Pete Rose Autographed Jersey With Stats" class="gridView_thumbnail" src="https://dygtyjqp7pi0m.cloudfront.net/i/73509/57253284_1m.jpg?v=8DDC3714943A850"/></a><span class="gridView_heading"><a href="https://www.liveauctionworld.com/Cincinnati-Reds-Pete-Rose-Autographed-Jersey-With-Stats_i57253284" title="Cincinnati Reds Pete Rose Autographed Jersey With Stats"><span class="gridView_title"><i class="gridView_lotnum">17 - </i>Cincinnati Reds Pete Rose Autographed Jersey With Stats</span></a></span><div class="auctioneer">Federal Assets Auctioneers</div><div class="description gridView_description">Cincinnati Reds Pete Rose Autographed Jersey With Stats. Pete Rose had 4256 hits in his 24 year career with the Reds, Phillies, and the Expos. Pete wo</div><span class=""><a href="https://www.liveauctionworld.com/livebid.aspx?as=109392" onclick="lag.EmitAnalytics('ClickLive')">Sold</a></span><div class="startpriceestimates">Estimate : 1,000.00 - 1,200.00 </div><div class="gridView_winningbid linkinfo bidinfo" title="(Hammer Price) = Total">Sold to floor for 800.00</div><div class="datetime gridView_countdown"> </div><span class="gridView-buttons"><a class="gridView_DetailsButton" href="https://www.liveauctionworld.com/Cincinnati-Reds-Pete-Rose-Autographed-Jersey-With-Stats_i57253284" title="Cincinnati Reds Pete Rose Autographed Jersey With Stats">Details...</a></span><span class="gridView-buttons"><a class="gridView_BookmarkButton" href="https://www.liveauctionworld.com/login.aspx?returnurl=http%3a%2f%2fwww.liveauctionworld.com%2fauction.aspx%3fas%3d109392" title="Sign-In to Bookmark Lot">Bookmark</a><span class="gridView_itemNotificationLink"></span></span></div><div class="gridItem" id="i57253285">
+<a class="row_thumbnail" href="https://www.liveauctionworld.com/Italian-18k-TT-Gold-Large-Wide-11-2mm-Textured-Domed-Omega-Back-Cuff-Earrings_i57253285" title="Italian 18k TT Gold Large Wide 11.2mm Textured Domed Omega Back Cuff Earrings"><img alt="Italian 18k TT Gold Large Wide 11.2mm Textured Domed Omega Back Cuff Earrings" class="gridView_thumbnail" src="https://dygtyjqp7pi0m.cloudfront.net/i/73509/57253285_1m.jpg?v=8DDC37176B877C0"/></a><span class="gridView_heading"><a href="https://www.liveauctionworld.com/Italian-18k-TT-Gold-Large-Wide-11-2mm-Textured-Domed-Omega-Back-Cuff-Earrings_i57253285" title="Italian 18k TT Gold Large Wide 11.2mm Textured Domed Omega Back Cuff Earrings"><span class="gridView_title"><i class="gridView_lotnum">18 - </i>Italian 18k TT Gold Large Wide 11.2mm Textured Domed Omega Back Cuff Earrings</span></a></span><div class="auctioneer">Federal Assets Auctioneers</div><div class="description gridView_description">A solid 18k yellow &amp; white gold cuff earrings. The earrings measure approximately 22.8x11.2mm and weigh a total of 10.30 grams.</div><span class=""><a href="https://www.liveauctionworld.com/livebid.aspx?as=109392" onclick="lag.EmitAnalytics('ClickLive')">Sold</a></span><div class="startpriceestimates">Estimate : 2,700.00 - 3,200.00 </div><div class="gridView_winningbid linkinfo bidinfo" title="(Hammer Price) = Total">Sold to floor for 2,200.00</div><div class="datetime gridView_countdown"> </div><span class="gridView-buttons"><a class="gridView_DetailsButton" href="https://www.liveauctionworld.com/Italian-18k-TT-Gold-Large-Wide-11-2mm-Textured-Domed-Omega-Back-Cuff-Earrings_i57253285" title="Italian 18k TT Gold Large Wide 11.2mm Textured Domed Omega Back Cuff Earrings">Details...</a></span><span class="gridView-buttons"><a class="gridView_BookmarkButton" href="https://www.liveauctionworld.com/login.aspx?returnurl=http%3a%2f%2fwww.liveauctionworld.com%2fauction.aspx%3fas%3d109392" title="Sign-In to Bookmark Lot">Bookmark</a><span class="gridView_itemNotificationLink"></span></span></div><div class="gridItem" id="i57253286">
+<a class="row_thumbnail" href="https://www.liveauctionworld.com/Untitled-by-Brodinsky-Original_i57253286" title="Untitled by Brodinsky Original"><img alt="Untitled by Brodinsky Original" class="gridView_thumbnail" src="https://dygtyjqp7pi0m.cloudfront.net/i/73509/57253286_1m.jpg?v=8DDC3719017AD30"/></a><span class="gridView_heading"><a href="https://www.liveauctionworld.com/Untitled-by-Brodinsky-Original_i57253286" title="Untitled by Brodinsky Original"><span class="gridView_title"><i class="gridView_lotnum">19 - </i>Untitled by Brodinsky Original</span></a></span><div class="auctioneer">Federal Assets Auctioneers</div><div class="description gridView_description">This is an original oil painting on canvas by Slava Brodinsky, hand signed by the artist. Includes Letter of Authenticity. Measures approx. 30"...</div><span class=""><a href="https://www.liveauctionworld.com/livebid.aspx?as=109392" onclick="lag.EmitAnalytics('ClickLive')">Passed</a></span><div class="startpriceestimates">Estimate : 1,500.00 - 1,800.00 </div><div class="gridView_winningbid"> </div><div class="datetime gridView_countdown"> </div><span class="gridView-buttons"><a class="gridView_DetailsButton" href="https://www.liveauctionworld.com/Untitled-by-Brodinsky-Original_i57253286" title="Untitled by Brodinsky Original">Details...</a></span><span class="gridView-buttons"><a class="gridView_BookmarkButton" href="https://www.liveauctionworld.com/login.aspx?returnurl=http%3a%2f%2fwww.liveauctionworld.com%2fauction.aspx%3fas%3d109392" title="Sign-In to Bookmark Lot">Bookmark</a><span class="gridView_itemNotificationLink"></span></span></div><div class="gridItem" id="i57253287">
+<a class="row_thumbnail" href="https://www.liveauctionworld.com/Beautiful-Marilyn-by-Jozza_i57253287" title="Beautiful Marilyn by Jozza"><img alt="Beautiful Marilyn by Jozza" class="gridView_thumbnail" src="https://dygtyjqp7pi0m.cloudfront.net/i/73509/57253287_1m.jpg?v=8DDC371ACB8EE40"/></a><span class="gridView_heading"><a href="https://www.liveauctionworld.com/Beautiful-Marilyn-by-Jozza_i57253287" title="Beautiful Marilyn by Jozza"><span class="gridView_title"><i class="gridView_lotnum">20 - </i>Beautiful Marilyn by Jozza</span></a></span><div class="auctioneer">Federal Assets Auctioneers</div><div class="description gridView_description">Stunningly beautiful aluminum on plexiglass in 3-d by jozza comes ready to hang  Art size 36x36 inches.</div><span class=""><a href="https://www.liveauctionworld.com/livebid.aspx?as=109392" onclick="lag.EmitAnalytics('ClickLive')">Passed</a></span><div class="startpriceestimates">Estimate : 4,500.00 - 5,200.00 </div><div class="gridView_winningbid"> </div><div class="datetime gridView_countdown"> </div><span class="gridView-buttons"><a class="gridView_DetailsButton" href="https://www.liveauctionworld.com/Beautiful-Marilyn-by-Jozza_i57253287" title="Beautiful Marilyn by Jozza">Details...</a></span><span class="gridView-buttons"><a class="gridView_BookmarkButton" href="https://www.liveauctionworld.com/login.aspx?returnurl=http%3a%2f%2fwww.liveauctionworld.com%2fauction.aspx%3fas%3d109392" title="Sign-In to Bookmark Lot">Bookmark</a><span class="gridView_itemNotificationLink"></span></span></div><div class="gridItem" id="i57253288">
+<a class="row_thumbnail" href="https://www.liveauctionworld.com/Louis-Vuitton-Brown-Monogram-Speedy-25-Satchel-Bag_i57253288" title="Louis Vuitton Brown Monogram Speedy 25 Satchel Bag"><img alt="Louis Vuitton Brown Monogram Speedy 25 Satchel Bag" class="gridView_thumbnail" src="https://dygtyjqp7pi0m.cloudfront.net/i/73509/57253288_1m.jpg?v=8DDC371CF4058E0"/></a><span class="gridView_heading"><a href="https://www.liveauctionworld.com/Louis-Vuitton-Brown-Monogram-Speedy-25-Satchel-Bag_i57253288" title="Louis Vuitton Brown Monogram Speedy 25 Satchel Bag"><span class="gridView_title"><i class="gridView_lotnum">21 - </i>Louis Vuitton Brown Monogram Speedy 25 Satchel Bag</span></a></span><div class="auctioneer">Federal Assets Auctioneers</div><div class="description gridView_description">One Louis Vuitton Brown Monogram Speedy 25 Satchel Bag. Item is sold AS-IS. All available information is listed in the description and shown in the ph</div><span class=""><a href="https://www.liveauctionworld.com/livebid.aspx?as=109392" onclick="lag.EmitAnalytics('ClickLive')">Sold</a></span><div class="startpriceestimates">Estimate : 2,500.00 - 2,900.00 </div><div class="gridView_winningbid linkinfo bidinfo" title="(Hammer Price) = Total">Sold to floor for 2,100.00</div><div class="datetime gridView_countdown"> </div><span class="gridView-buttons"><a class="gridView_DetailsButton" href="https://www.liveauctionworld.com/Louis-Vuitton-Brown-Monogram-Speedy-25-Satchel-Bag_i57253288" title="Louis Vuitton Brown Monogram Speedy 25 Satchel Bag">Details...</a></span><span class="gridView-buttons"><a class="gridView_BookmarkButton" href="https://www.liveauctionworld.com/login.aspx?returnurl=http%3a%2f%2fwww.liveauctionworld.com%2fauction.aspx%3fas%3d109392" title="Sign-In to Bookmark Lot">Bookmark</a><span class="gridView_itemNotificationLink"></span></span></div><div class="gridItem" id="i57253289">
+<a class="row_thumbnail" href="https://www.liveauctionworld.com/12-33-ctw-Tourmaline-and-Diamond-Pendant-With-Chain-14KT-White-Gold_i57253289" title="12.33 ctw Tourmaline and Diamond Pendant With Chain - 14KT White Gold"><img alt="12.33 ctw Tourmaline and Diamond Pendant With Chain - 14KT White Gold" class="gridView_thumbnail" src="https://dygtyjqp7pi0m.cloudfront.net/i/73509/57253289_1m.jpg?v=8DDC3720E4269C0"/></a><span class="gridView_heading"><a href="https://www.liveauctionworld.com/12-33-ctw-Tourmaline-and-Diamond-Pendant-With-Chain-14KT-White-Gold_i57253289" title="12.33 ctw Tourmaline and Diamond Pendant With Chain - 14KT White Gold"><span class="gridView_title"><i class="gridView_lotnum">22 - </i>12.33 ctw Tourmaline and Diamond Pendant With Chain - 14KT White Gold</span></a></span><div class="auctioneer">Federal Assets Auctioneers</div><div class="description gridView_description">One 14KT White Gold "One of a Kind" Pendant with 18 inches chain included, 14.89 grams. Containing: Main Gemstones: Identity: Natural Tour...</div><span class=""><a href="https://www.liveauctionworld.com/livebid.aspx?as=109392" onclick="lag.EmitAnalytics('ClickLive')">Sold</a></span><div class="startpriceestimates">Estimate : 6,000.00 - 7,000.00 </div><div class="gridView_winningbid linkinfo bidinfo" title="(Hammer Price) = Total">Sold to floor for 4,250.00</div><div class="datetime gridView_countdown"> </div><span class="gridView-buttons"><a class="gridView_DetailsButton" href="https://www.liveauctionworld.com/12-33-ctw-Tourmaline-and-Diamond-Pendant-With-Chain-14KT-White-Gold_i57253289" title="12.33 ctw Tourmaline and Diamond Pendant With Chain - 14KT White Gold">Details...</a></span><span class="gridView-buttons"><a class="gridView_BookmarkButton" href="https://www.liveauctionworld.com/login.aspx?returnurl=http%3a%2f%2fwww.liveauctionworld.com%2fauction.aspx%3fas%3d109392" title="Sign-In to Bookmark Lot">Bookmark</a><span class="gridView_itemNotificationLink"></span></span></div><div class="gridItem" id="i57253290">
+<a class="row_thumbnail" href="https://www.liveauctionworld.com/Unforgettaball-Kingdome-Collectable-Baseball_i57253290" title='Unforgettaball! "Kingdome" Collectable Baseball'><img alt='Unforgettaball! "Kingdome" Collectable Baseball' class="gridView_thumbnail" src="https://dygtyjqp7pi0m.cloudfront.net/i/73509/57253290_1m.jpg?v=8DDC37232243440"/></a><span class="gridView_heading"><a href="https://www.liveauctionworld.com/Unforgettaball-Kingdome-Collectable-Baseball_i57253290" title='Unforgettaball! "Kingdome" Collectable Baseball'><span class="gridView_title"><i class="gridView_lotnum">23 - </i>Unforgettaball! "Kingdome" Collectable Baseball</span></a></span><div class="auctioneer">Federal Assets Auctioneers</div><div class="description gridView_description">Unforgettaball! "Kingdome" Collectable Baseball. Unforgettaball! "Kingdome" Limited Edition Collector's Series hand-designed...</div><span class=""><a href="https://www.liveauctionworld.com/livebid.aspx?as=109392" onclick="lag.EmitAnalytics('ClickLive')">Sold</a></span><div class="startpriceestimates">Estimate : 250.00 - 300.00 </div><div class="gridView_winningbid linkinfo bidinfo" title="(Hammer Price) = Total">Sold to floor for 90.00</div><div class="datetime gridView_countdown"> </div><span class="gridView-buttons"><a class="gridView_DetailsButton" href="https://www.liveauctionworld.com/Unforgettaball-Kingdome-Collectable-Baseball_i57253290" title='Unforgettaball! "Kingdome" Collectable Baseball'>Details...</a></span><span class="gridView-buttons"><a class="gridView_BookmarkButton" href="https://www.liveauctionworld.com/login.aspx?returnurl=http%3a%2f%2fwww.liveauctionworld.com%2fauction.aspx%3fas%3d109392" title="Sign-In to Bookmark Lot">Bookmark</a><span class="gridView_itemNotificationLink"></span></span></div><div class="gridItem" id="i57253291">
+<a class="row_thumbnail" href="https://www.liveauctionworld.com/Renoir-Landscape-In-Southern-France_i57253291" title="Renoir - Landscape In Southern France"><img alt="Renoir - Landscape In Southern France" class="gridView_thumbnail" src="https://dygtyjqp7pi0m.cloudfront.net/i/73509/57253291_1m.jpg?v=8DDC3724FDA40B0"/></a><span class="gridView_heading"><a href="https://www.liveauctionworld.com/Renoir-Landscape-In-Southern-France_i57253291" title="Renoir - Landscape In Southern France"><span class="gridView_title"><i class="gridView_lotnum">24 - </i>Renoir - Landscape In Southern France</span></a></span><div class="auctioneer">Federal Assets Auctioneers</div><div class="description gridView_description">Artist: Pierre-Auguste Renoir 1841-1919 - Title: Landscape in Southern France - Medium: Fine Art Reproduction Giclee on Canvas - Image Size: Approxima</div><span class=""><a href="https://www.liveauctionworld.com/livebid.aspx?as=109392" onclick="lag.EmitAnalytics('ClickLive')">Sold</a></span><div class="startpriceestimates">Estimate : 250.00 - 300.00 </div><div class="gridView_winningbid linkinfo bidinfo" title="(Hammer Price) = Total">Sold to floor for 160.00</div><div class="datetime gridView_countdown"> </div><span class="gridView-buttons"><a class="gridView_DetailsButton" href="https://www.liveauctionworld.com/Renoir-Landscape-In-Southern-France_i57253291" title="Renoir - Landscape In Southern France">Details...</a></span><span class="gridView-buttons"><a class="gridView_BookmarkButton" href="https://www.liveauctionworld.com/login.aspx?returnurl=http%3a%2f%2fwww.liveauctionworld.com%2fauction.aspx%3fas%3d109392" title="Sign-In to Bookmark Lot">Bookmark</a><span class="gridView_itemNotificationLink"></span></span></div><div class="gridItem" id="i57253292">
+<a class="row_thumbnail" href="https://www.liveauctionworld.com/Louis-Vuitton-Keepall-45-cm-Bandouliere-Duffel-Bag_i57253292" title="Louis Vuitton Keepall 45 cm Bandouliere Duffel Bag"><img alt="Louis Vuitton Keepall 45 cm Bandouliere Duffel Bag" class="gridView_thumbnail" src="https://dygtyjqp7pi0m.cloudfront.net/i/73509/57253292_1m.jpg?v=8DDC3727051B710"/></a><span class="gridView_heading"><a href="https://www.liveauctionworld.com/Louis-Vuitton-Keepall-45-cm-Bandouliere-Duffel-Bag_i57253292" title="Louis Vuitton Keepall 45 cm Bandouliere Duffel Bag"><span class="gridView_title"><i class="gridView_lotnum">25 - </i>Louis Vuitton Keepall 45 cm Bandouliere Duffel Bag</span></a></span><div class="auctioneer">Federal Assets Auctioneers</div><div class="description gridView_description">One Louis Vuitton Keepall 45 cm Bandouliere Duffel Bag. Item is sold AS-IS. All available information is listed in the description and shown in the ph</div><span class=""><a href="https://www.liveauctionworld.com/livebid.aspx?as=109392" onclick="lag.EmitAnalytics('ClickLive')">Sold</a></span><div class="startpriceestimates">Estimate : 3,800.00 - 4,400.00 </div><div class="gridView_winningbid linkinfo bidinfo" title="(Hammer Price) = Total">Sold to floor for 3,250.00</div><div class="datetime gridView_countdown"> </div><span class="gridView-buttons"><a class="gridView_DetailsButton" href="https://www.liveauctionworld.com/Louis-Vuitton-Keepall-45-cm-Bandouliere-Duffel-Bag_i57253292" title="Louis Vuitton Keepall 45 cm Bandouliere Duffel Bag">Details...</a></span><span class="gridView-buttons"><a class="gridView_BookmarkButton" href="https://www.liveauctionworld.com/login.aspx?returnurl=http%3a%2f%2fwww.liveauctionworld.com%2fauction.aspx%3fas%3d109392" title="Sign-In to Bookmark Lot">Bookmark</a><span class="gridView_itemNotificationLink"></span></span></div><div class="gridItem" id="i57253293">
+<a class="row_thumbnail" href="https://www.liveauctionworld.com/1-50-ct-GIA-Emerald-and-Diamond-Wedding-Engagement-Ring-14KT-White-Gold_i57253293" title="1.50 ct. GIA Emerald and Diamond Wedding Engagement Ring - 14KT White Gold"><img alt="1.50 ct. GIA Emerald and Diamond Wedding Engagement Ring - 14KT White Gold" class="gridView_thumbnail" src="https://dygtyjqp7pi0m.cloudfront.net/i/73509/57253293_1m.jpg?v=8DDC372C7E15580"/></a><span class="gridView_heading"><a href="https://www.liveauctionworld.com/1-50-ct-GIA-Emerald-and-Diamond-Wedding-Engagement-Ring-14KT-White-Gold_i57253293" title="1.50 ct. GIA Emerald and Diamond Wedding Engagement Ring - 14KT White Gold"><span class="gridView_title"><i class="gridView_lotnum">26 - </i>1.50 ct. GIA Emerald and Diamond Wedding Engagement Ring - 14KT White Gold</span></a></span><div class="auctioneer">Federal Assets Auctioneers</div><div class="description gridView_description">This stunning three-stone ring features a GIA-certified 1.00ct emerald cut diamond with VS-2 clarity, flanked by 0.50ct of natural emeralds with a vib</div><span class=""><a href="https://www.liveauctionworld.com/livebid.aspx?as=109392" onclick="lag.EmitAnalytics('ClickLive')">Sold</a></span><div class="startpriceestimates">Estimate : 5,700.00 - 6,600.00 </div><div class="gridView_winningbid linkinfo bidinfo" title="(Hammer Price) = Total">Sold to floor for 5,500.00</div><div class="datetime gridView_countdown"> </div><span class="gridView-buttons"><a class="gridView_DetailsButton" href="https://www.liveauctionworld.com/1-50-ct-GIA-Emerald-and-Diamond-Wedding-Engagement-Ring-14KT-White-Gold_i57253293" title="1.50 ct. GIA Emerald and Diamond Wedding Engagement Ring - 14KT White Gold">Details...</a></span><span class="gridView-buttons"><a class="gridView_BookmarkButton" href="https://www.liveauctionworld.com/login.aspx?returnurl=http%3a%2f%2fwww.liveauctionworld.com%2fauction.aspx%3fas%3d109392" title="Sign-In to Bookmark Lot">Bookmark</a><span class="gridView_itemNotificationLink"></span></span></div><div class="gridItem" id="i57253294">
+<a class="row_thumbnail" href="https://www.liveauctionworld.com/Renoir-Portrait-Of-Madame-Renoir-With-Bob_i57253294" title="Renoir - Portrait Of Madame Renoir With Bob"><img alt="Renoir - Portrait Of Madame Renoir With Bob" class="gridView_thumbnail" src="https://dygtyjqp7pi0m.cloudfront.net/i/73509/57253294_1m.jpg?v=8DDC372EA8548D0"/></a><span class="gridView_heading"><a href="https://www.liveauctionworld.com/Renoir-Portrait-Of-Madame-Renoir-With-Bob_i57253294" title="Renoir - Portrait Of Madame Renoir With Bob"><span class="gridView_title"><i class="gridView_lotnum">27 - </i>Renoir - Portrait Of Madame Renoir With Bob</span></a></span><div class="auctioneer">Federal Assets Auctioneers</div><div class="description gridView_description">Artist: Pierre-Auguste Renoir 1841-1919 - Title: Portrait Of Madame Renoir With Bob - Medium: Fine Art Reproduction Giclee on Canvas - Image Size: App</div><span class=""><a href="https://www.liveauctionworld.com/livebid.aspx?as=109392" onclick="lag.EmitAnalytics('ClickLive')">Sold</a></span><div class="startpriceestimates">Estimate : 250.00 - 300.00 </div><div class="gridView_winningbid linkinfo bidinfo" title="(Hammer Price) = Total">Sold to floor for 170.00</div><div class="datetime gridView_countdown"> </div><span class="gridView-buttons"><a class="gridView_DetailsButton" href="https://www.liveauctionworld.com/Renoir-Portrait-Of-Madame-Renoir-With-Bob_i57253294" title="Renoir - Portrait Of Madame Renoir With Bob">Details...</a></span><span class="gridView-buttons"><a class="gridView_BookmarkButton" href="https://www.liveauctionworld.com/login.aspx?returnurl=http%3a%2f%2fwww.liveauctionworld.com%2fauction.aspx%3fas%3d109392" title="Sign-In to Bookmark Lot">Bookmark</a><span class="gridView_itemNotificationLink"></span></span></div><div class="gridItem" id="i57253295">
+<a class="row_thumbnail" href="https://www.liveauctionworld.com/Donald-Trump-45th-President-Fine-Silver-Coin-BUNDLE-5_i57253295" title="Donald Trump 45th President Fine Silver Coin BUNDLE (5)"><img alt="Donald Trump 45th President Fine Silver Coin BUNDLE (5)" class="gridView_thumbnail" src="https://dygtyjqp7pi0m.cloudfront.net/i/73509/57253295_1m.jpg?v=8DDC373036DEEB0"/></a><span class="gridView_heading"><a href="https://www.liveauctionworld.com/Donald-Trump-45th-President-Fine-Silver-Coin-BUNDLE-5_i57253295" title="Donald Trump 45th President Fine Silver Coin BUNDLE (5)"><span class="gridView_title"><i class="gridView_lotnum">28 - </i>Donald Trump 45th President Fine Silver Coin BUNDLE (5)</span></a></span><div class="auctioneer">Federal Assets Auctioneers</div><div class="description gridView_description">This bundle features five 1oz .999 fine silver coins showcasing a detailed profile of the 45th President, Donald J. Trump. Perfect for collectors and </div><span class=""><a href="https://www.liveauctionworld.com/livebid.aspx?as=109392" onclick="lag.EmitAnalytics('ClickLive')">Sold</a></span><div class="startpriceestimates">Estimate : 600.00 - 700.00 </div><div class="gridView_winningbid linkinfo bidinfo" title="(Hammer Price) = Total">Sold to floor for 400.00</div><div class="datetime gridView_countdown"> </div><span class="gridView-buttons"><a class="gridView_DetailsButton" href="https://www.liveauctionworld.com/Donald-Trump-45th-President-Fine-Silver-Coin-BUNDLE-5_i57253295" title="Donald Trump 45th President Fine Silver Coin BUNDLE (5)">Details...</a></span><span class="gridView-buttons"><a class="gridView_BookmarkButton" href="https://www.liveauctionworld.com/login.aspx?returnurl=http%3a%2f%2fwww.liveauctionworld.com%2fauction.aspx%3fas%3d109392" title="Sign-In to Bookmark Lot">Bookmark</a><span class="gridView_itemNotificationLink"></span></span></div><div class="gridItem" id="i57253296">
+<a class="row_thumbnail" href="https://www.liveauctionworld.com/Vintage-Carved-Black-Stone-Wide-Band-Ring-w-10k-Gold-Bezel-Set-Shell-Cameo_i57253296" title="Vintage Carved Black Stone Wide Band Ring w/ 10k Gold Bezel Set Shell Cameo"><img alt="Vintage Carved Black Stone Wide Band Ring w/ 10k Gold Bezel Set Shell Cameo" class="gridView_thumbnail" src="https://dygtyjqp7pi0m.cloudfront.net/i/73509/57253296_1m.jpg?v=8DDC37321C01410"/></a><span class="gridView_heading"><a href="https://www.liveauctionworld.com/Vintage-Carved-Black-Stone-Wide-Band-Ring-w-10k-Gold-Bezel-Set-Shell-Cameo_i57253296" title="Vintage Carved Black Stone Wide Band Ring w/ 10k Gold Bezel Set Shell Cameo"><span class="gridView_title"><i class="gridView_lotnum">29 - </i>Vintage Carved Black Stone Wide Band Ring w/ 10k Gold Bezel Set Shell Cameo</span></a></span><div class="auctioneer">Federal Assets Auctioneers</div><div class="description gridView_description">A vintage solid 10k yellow gold ring, with carved black stone, and 1 shell cameo (18.1x13.4mm). The ring is size 9.0, weighs a total of 14.20 grams, a</div><span class=""><a href="https://www.liveauctionworld.com/livebid.aspx?as=109392" onclick="lag.EmitAnalytics('ClickLive')">Sold</a></span><div class="startpriceestimates">Estimate : 1,400.00 - 1,700.00 </div><div class="gridView_winningbid linkinfo bidinfo" title="(Hammer Price) = Total">Sold to floor for 1,100.00</div><div class="datetime gridView_countdown"> </div><span class="gridView-buttons"><a class="gridView_DetailsButton" href="https://www.liveauctionworld.com/Vintage-Carved-Black-Stone-Wide-Band-Ring-w-10k-Gold-Bezel-Set-Shell-Cameo_i57253296" title="Vintage Carved Black Stone Wide Band Ring w/ 10k Gold Bezel Set Shell Cameo">Details...</a></span><span class="gridView-buttons"><a class="gridView_BookmarkButton" href="https://www.liveauctionworld.com/login.aspx?returnurl=http%3a%2f%2fwww.liveauctionworld.com%2fauction.aspx%3fas%3d109392" title="Sign-In to Bookmark Lot">Bookmark</a><span class="gridView_itemNotificationLink"></span></span></div><div class="gridItem" id="i57253297">
+<a class="row_thumbnail" href="https://www.liveauctionworld.com/Umbrella-Man-by-Peter-Max_i57253297" title="Umbrella Man by Peter Max"><img alt="Umbrella Man by Peter Max" class="gridView_thumbnail" src="https://dygtyjqp7pi0m.cloudfront.net/i/73509/57253297_1m.jpg?v=8DDC37339D934F0"/></a><span class="gridView_heading"><a href="https://www.liveauctionworld.com/Umbrella-Man-by-Peter-Max_i57253297" title="Umbrella Man by Peter Max"><span class="gridView_title"><i class="gridView_lotnum">30 - </i>Umbrella Man by Peter Max</span></a></span><div class="auctioneer">Federal Assets Auctioneers</div><div class="description gridView_description">"Umbrella Man" is a one-of-a-kind mixed media on paper, hand signed by Peter Max. The piece comes custom framed with a backside cutout to ...</div><span class=""><a href="https://www.liveauctionworld.com/livebid.aspx?as=109392" onclick="lag.EmitAnalytics('ClickLive')">Sold</a></span><div class="startpriceestimates">Estimate : 6,900.00 - 8,000.00 </div><div class="gridView_winningbid linkinfo bidinfo" title="(Hammer Price) = Total">Sold to floor for 6,000.00</div><div class="datetime gridView_countdown"> </div><span class="gridView-buttons"><a class="gridView_DetailsButton" href="https://www.liveauctionworld.com/Umbrella-Man-by-Peter-Max_i57253297" title="Umbrella Man by Peter Max">Details...</a></span><span class="gridView-buttons"><a class="gridView_BookmarkButton" href="https://www.liveauctionworld.com/login.aspx?returnurl=http%3a%2f%2fwww.liveauctionworld.com%2fauction.aspx%3fas%3d109392" title="Sign-In to Bookmark Lot">Bookmark</a><span class="gridView_itemNotificationLink"></span></span></div><div class="gridItem" id="i57253298">
+<a class="row_thumbnail" href="https://www.liveauctionworld.com/Rolex-Mens-Stainless-Steel-36MM-Silver-Index-White-Gold-Bezel-Datejust-Wristwatc_i57253298" title="Rolex Mens Stainless Steel 36MM Silver Index White Gold Bezel Datejust Wristwatc"><img alt="Rolex Mens Stainless Steel 36MM Silver Index White Gold Bezel Datejust Wristwatc" class="gridView_thumbnail" src="https://dygtyjqp7pi0m.cloudfront.net/i/73509/57253298_1m.jpg?v=8DDC37362CC73E0"/></a><span class="gridView_heading"><a href="https://www.liveauctionworld.com/Rolex-Mens-Stainless-Steel-36MM-Silver-Index-White-Gold-Bezel-Datejust-Wristwatc_i57253298" title="Rolex Mens Stainless Steel 36MM Silver Index White Gold Bezel Datejust Wristwatc"><span class="gridView_title"><i class="gridView_lotnum">31 - </i>Rolex Mens Stainless Steel 36MM Silver Index White Gold Bezel Datejust Wristwatc</span></a></span><div class="auctioneer">Federal Assets Auctioneers</div><div class="description gridView_description">One Mens Pre Owned Stainless Steel Rolex Datejust Polished, Serviced &amp; Electronically Tested, Rolex Stainless Steel Case: 36mm, Rolex Stainless ...</div><span class=""><a href="https://www.liveauctionworld.com/livebid.aspx?as=109392" onclick="lag.EmitAnalytics('ClickLive')">Passed</a></span><div class="startpriceestimates">Estimate : 15,500.00 - 17,900.00 </div><div class="gridView_winningbid"> </div><div class="datetime gridView_countdown"> </div><span class="gridView-buttons"><a class="gridView_DetailsButton" href="https://www.liveauctionworld.com/Rolex-Mens-Stainless-Steel-36MM-Silver-Index-White-Gold-Bezel-Datejust-Wristwatc_i57253298" title="Rolex Mens Stainless Steel 36MM Silver Index White Gold Bezel Datejust Wristwatc">Details...</a></span><span class="gridView-buttons"><a class="gridView_BookmarkButton" href="https://www.liveauctionworld.com/login.aspx?returnurl=http%3a%2f%2fwww.liveauctionworld.com%2fauction.aspx%3fas%3d109392" title="Sign-In to Bookmark Lot">Bookmark</a><span class="gridView_itemNotificationLink"></span></span></div><div class="gridItem" id="i57253299">
+<a class="row_thumbnail" href="https://www.liveauctionworld.com/Boom-Shaka-Laka-Laka-by-Everhart-Tom_i57253299" title="Boom Shaka Laka Laka by Everhart Tom"><img alt="Boom Shaka Laka Laka by Everhart Tom" class="gridView_thumbnail" src="https://dygtyjqp7pi0m.cloudfront.net/i/73509/57253299_1m.jpg?v=8DDC3737F88B700"/></a><span class="gridView_heading"><a href="https://www.liveauctionworld.com/Boom-Shaka-Laka-Laka-by-Everhart-Tom_i57253299" title="Boom Shaka Laka Laka by Everhart Tom"><span class="gridView_title"><i class="gridView_lotnum">32 - </i>Boom Shaka Laka Laka by Everhart Tom</span></a></span><div class="auctioneer">Federal Assets Auctioneers</div><div class="description gridView_description">"Boom Shaka Laka Laka" is a limited edition hand pulled original lithograph on museum quality deckle-edge paper by Tom Everhart. The piece...</div><span class=""><a href="https://www.liveauctionworld.com/livebid.aspx?as=109392" onclick="lag.EmitAnalytics('ClickLive')">Sold</a></span><div class="startpriceestimates">Estimate : 2,300.00 - 2,600.00 </div><div class="gridView_winningbid linkinfo bidinfo" title="(Hammer Price) = Total">Sold to floor for 2,100.00</div><div class="datetime gridView_countdown"> </div><span class="gridView-buttons"><a class="gridView_DetailsButton" href="https://www.liveauctionworld.com/Boom-Shaka-Laka-Laka-by-Everhart-Tom_i57253299" title="Boom Shaka Laka Laka by Everhart Tom">Details...</a></span><span class="gridView-buttons"><a class="gridView_BookmarkButton" href="https://www.liveauctionworld.com/login.aspx?returnurl=http%3a%2f%2fwww.liveauctionworld.com%2fauction.aspx%3fas%3d109392" title="Sign-In to Bookmark Lot">Bookmark</a><span class="gridView_itemNotificationLink"></span></span></div><div class="gridItem" id="i57253300">
+<a class="row_thumbnail" href="https://www.liveauctionworld.com/Antique-Victorian-14K-Rosy-Yellow-Gold-Seed-Pearl-Fleur-De-Lis-Stick-Pin_i57253300" title="Antique Victorian 14K Rosy Yellow Gold Seed Pearl Fleur De Lis Stick Pin"><img alt="Antique Victorian 14K Rosy Yellow Gold Seed Pearl Fleur De Lis Stick Pin" class="gridView_thumbnail" src="https://dygtyjqp7pi0m.cloudfront.net/i/73509/57253300_1m.jpg?v=8DDC3739B9706E0"/></a><span class="gridView_heading"><a href="https://www.liveauctionworld.com/Antique-Victorian-14K-Rosy-Yellow-Gold-Seed-Pearl-Fleur-De-Lis-Stick-Pin_i57253300" title="Antique Victorian 14K Rosy Yellow Gold Seed Pearl Fleur De Lis Stick Pin"><span class="gridView_title"><i class="gridView_lotnum">33 - </i>Antique Victorian 14K Rosy Yellow Gold Seed Pearl Fleur De Lis Stick Pin</span></a></span><div class="auctioneer">Federal Assets Auctioneers</div><div class="description gridView_description">An antique solid 14k rosy yellow gold stick pin, with 12 round shape cultured seed pearls (2.6-1.3mm each ). Measures 70.6x13mm and weighs a total of </div><span class=""><a href="https://www.liveauctionworld.com/livebid.aspx?as=109392" onclick="lag.EmitAnalytics('ClickLive')">Sold</a></span><div class="startpriceestimates">Estimate : 400.00 - 500.00 </div><div class="gridView_winningbid linkinfo bidinfo" title="(Hammer Price) = Total">Sold to floor for 325.00</div><div class="datetime gridView_countdown"> </div><span class="gridView-buttons"><a class="gridView_DetailsButton" href="https://www.liveauctionworld.com/Antique-Victorian-14K-Rosy-Yellow-Gold-Seed-Pearl-Fleur-De-Lis-Stick-Pin_i57253300" title="Antique Victorian 14K Rosy Yellow Gold Seed Pearl Fleur De Lis Stick Pin">Details...</a></span><span class="gridView-buttons"><a class="gridView_BookmarkButton" href="https://www.liveauctionworld.com/login.aspx?returnurl=http%3a%2f%2fwww.liveauctionworld.com%2fauction.aspx%3fas%3d109392" title="Sign-In to Bookmark Lot">Bookmark</a><span class="gridView_itemNotificationLink"></span></span></div><div class="gridItem" id="i57253301">
+<a class="row_thumbnail" href="https://www.liveauctionworld.com/Autographed-Duke-Snider-Brooklyn-Helmet-PSA-Certified_i57253301" title="Autographed Duke Snider Brooklyn Helmet PSA Certified"><img alt="Autographed Duke Snider Brooklyn Helmet PSA Certified" class="gridView_thumbnail" src="https://dygtyjqp7pi0m.cloudfront.net/i/73509/57253301_1m.jpg?v=8DDC373BD20B090"/></a><span class="gridView_heading"><a href="https://www.liveauctionworld.com/Autographed-Duke-Snider-Brooklyn-Helmet-PSA-Certified_i57253301" title="Autographed Duke Snider Brooklyn Helmet PSA Certified"><span class="gridView_title"><i class="gridView_lotnum">34 - </i>Autographed Duke Snider Brooklyn Helmet PSA Certified</span></a></span><div class="auctioneer">Federal Assets Auctioneers</div><div class="description gridView_description">Brooklyn Dodgers signed Edwin "Duke" Snider baseball helmet. Edwin "Duke" Snider, a Hall of Famer who was once one of the kings ...</div><span class=""><a href="https://www.liveauctionworld.com/livebid.aspx?as=109392" onclick="lag.EmitAnalytics('ClickLive')">Sold</a></span><div class="startpriceestimates">Estimate : 750.00 - 900.00 </div><div class="gridView_winningbid linkinfo bidinfo" title="(Hammer Price) = Total">Sold to floor for 800.00</div><div class="datetime gridView_countdown"> </div><span class="gridView-buttons"><a class="gridView_DetailsButton" href="https://www.liveauctionworld.com/Autographed-Duke-Snider-Brooklyn-Helmet-PSA-Certified_i57253301" title="Autographed Duke Snider Brooklyn Helmet PSA Certified">Details...</a></span><span class="gridView-buttons"><a class="gridView_BookmarkButton" href="https://www.liveauctionworld.com/login.aspx?returnurl=http%3a%2f%2fwww.liveauctionworld.com%2fauction.aspx%3fas%3d109392" title="Sign-In to Bookmark Lot">Bookmark</a><span class="gridView_itemNotificationLink"></span></span></div><div class="gridItem" id="i57253302">
+<a class="row_thumbnail" href="https://www.liveauctionworld.com/14kt-RG-Stack-Diamond-Ring_i57253302" title="14kt RG Stack Diamond Ring"><img alt="14kt RG Stack Diamond Ring" class="gridView_thumbnail" src="https://dygtyjqp7pi0m.cloudfront.net/i/73509/57253302_1m.jpg?v=8DDC373D9B7B870"/></a><span class="gridView_heading"><a href="https://www.liveauctionworld.com/14kt-RG-Stack-Diamond-Ring_i57253302" title="14kt RG Stack Diamond Ring"><span class="gridView_title"><i class="gridView_lotnum">35 - </i>14kt RG Stack Diamond Ring</span></a></span><div class="auctioneer">Federal Assets Auctioneers</div><div class="description gridView_description">This 14KT rose gold fashion ring features a scalloped motif with milgrain detailing and a bright polish finish. It is set with five bezel-set round br</div><span class=""><a href="https://www.liveauctionworld.com/livebid.aspx?as=109392" onclick="lag.EmitAnalytics('ClickLive')">Sold</a></span><div class="startpriceestimates">Estimate : 1,200.00 - 1,400.00 </div><div class="gridView_winningbid linkinfo bidinfo" title="(Hammer Price) = Total">Sold to floor for 1,100.00</div><div class="datetime gridView_countdown"> </div><span class="gridView-buttons"><a class="gridView_DetailsButton" href="https://www.liveauctionworld.com/14kt-RG-Stack-Diamond-Ring_i57253302" title="14kt RG Stack Diamond Ring">Details...</a></span><span class="gridView-buttons"><a class="gridView_BookmarkButton" href="https://www.liveauctionworld.com/login.aspx?returnurl=http%3a%2f%2fwww.liveauctionworld.com%2fauction.aspx%3fas%3d109392" title="Sign-In to Bookmark Lot">Bookmark</a><span class="gridView_itemNotificationLink"></span></span></div><div class="gridItem" id="i57253303">
+<a class="row_thumbnail" href="https://www.liveauctionworld.com/Le-Bouquet-Devant-La-Fenetre-by-Chagall-1887-1985_i57253303" title="Le Bouquet Devant La Fenetre by Chagall (1887-1985)"><img alt="Le Bouquet Devant La Fenetre by Chagall (1887-1985)" class="gridView_thumbnail" src="https://dygtyjqp7pi0m.cloudfront.net/i/73509/57253303_1m.jpg?v=8DDC37440C31D70"/></a><span class="gridView_heading"><a href="https://www.liveauctionworld.com/Le-Bouquet-Devant-La-Fenetre-by-Chagall-1887-1985_i57253303" title="Le Bouquet Devant La Fenetre by Chagall (1887-1985)"><span class="gridView_title"><i class="gridView_lotnum">36 - </i>Le Bouquet Devant La Fenetre by Chagall (1887-1985)</span></a></span><div class="auctioneer">Federal Assets Auctioneers</div><div class="description gridView_description">"Le Bouquet Devant La Fenetre" is a limited edition lithograph on paper by Marc Chagall (1887-1985). Printed by Atelier Tete a Tete in Par...</div><span class=""><a href="https://www.liveauctionworld.com/livebid.aspx?as=109392" onclick="lag.EmitAnalytics('ClickLive')">Sold</a></span><div class="startpriceestimates">Estimate : 900.00 - 1,000.00 </div><div class="gridView_winningbid linkinfo bidinfo" title="(Hammer Price) = Total">Sold to floor for 850.00</div><div class="datetime gridView_countdown"> </div><span class="gridView-buttons"><a class="gridView_DetailsButton" href="https://www.liveauctionworld.com/Le-Bouquet-Devant-La-Fenetre-by-Chagall-1887-1985_i57253303" title="Le Bouquet Devant La Fenetre by Chagall (1887-1985)">Details...</a></span><span class="gridView-buttons"><a class="gridView_BookmarkButton" href="https://www.liveauctionworld.com/login.aspx?returnurl=http%3a%2f%2fwww.liveauctionworld.com%2fauction.aspx%3fas%3d109392" title="Sign-In to Bookmark Lot">Bookmark</a><span class="gridView_itemNotificationLink"></span></span></div><div class="gridItem" id="i57253304">
+<a class="row_thumbnail" href="https://www.liveauctionworld.com/16-34-ctw-Opal-And-Diamond-Pendant-Chain-14KT-White-Gold_i57253304" title="16.34 ctw Opal And Diamond Pendant &amp; Chain - 14KT White Gold"><img alt="16.34 ctw Opal And Diamond Pendant &amp; Chain - 14KT White Gold" class="gridView_thumbnail" src="https://dygtyjqp7pi0m.cloudfront.net/i/73509/57253304_1m.jpg?v=8DDC37459F8AAD0"/></a><span class="gridView_heading"><a href="https://www.liveauctionworld.com/16-34-ctw-Opal-And-Diamond-Pendant-Chain-14KT-White-Gold_i57253304" title="16.34 ctw Opal And Diamond Pendant &amp; Chain - 14KT White Gold"><span class="gridView_title"><i class="gridView_lotnum">37 - </i>16.34 ctw Opal And Diamond Pendant &amp; Chain - 14KT White Gold</span></a></span><div class="auctioneer">Federal Assets Auctioneers</div><div class="description gridView_description">One electronically tested 14KT white gold lady's combination cast &amp; assembled fashion pendant &amp; chain 19.0' long, 2.5mm twisted oval...</div><span class=""><a href="https://www.liveauctionworld.com/livebid.aspx?as=109392" onclick="lag.EmitAnalytics('ClickLive')">Sold</a></span><div class="startpriceestimates">Estimate : 3,500.00 - 4,100.00 </div><div class="gridView_winningbid linkinfo bidinfo" title="(Hammer Price) = Total">Sold to floor for 3,750.00</div><div class="datetime gridView_countdown"> </div><span class="gridView-buttons"><a class="gridView_DetailsButton" href="https://www.liveauctionworld.com/16-34-ctw-Opal-And-Diamond-Pendant-Chain-14KT-White-Gold_i57253304" title="16.34 ctw Opal And Diamond Pendant &amp; Chain - 14KT White Gold">Details...</a></span><span class="gridView-buttons"><a class="gridView_BookmarkButton" href="https://www.liveauctionworld.com/login.aspx?returnurl=http%3a%2f%2fwww.liveauctionworld.com%2fauction.aspx%3fas%3d109392" title="Sign-In to Bookmark Lot">Bookmark</a><span class="gridView_itemNotificationLink"></span></span></div><div class="gridItem" id="i57253305">
+<a class="row_thumbnail" href="https://www.liveauctionworld.com/Donald-Trump-Fight-1oz-999-Fine-Silver-Coin_i57253305" title="Donald Trump Fight 1oz .999 Fine Silver Coin"><img alt="Donald Trump Fight 1oz .999 Fine Silver Coin" class="gridView_thumbnail" src="https://dygtyjqp7pi0m.cloudfront.net/i/73509/57253305_1m.jpg?v=8DDC3747500FC60"/></a><span class="gridView_heading"><a href="https://www.liveauctionworld.com/Donald-Trump-Fight-1oz-999-Fine-Silver-Coin_i57253305" title="Donald Trump Fight 1oz .999 Fine Silver Coin"><span class="gridView_title"><i class="gridView_lotnum">38 - </i>Donald Trump Fight 1oz .999 Fine Silver Coin</span></a></span><div class="auctioneer">Federal Assets Auctioneers</div><div class="description gridView_description">This Donald Trump Fight 1oz .999 Fine Silver Coin commemorates the iconic image from the assassination attempt, showing Trump defiantly raising his fi</div><span class=""><a href="https://www.liveauctionworld.com/livebid.aspx?as=109392" onclick="lag.EmitAnalytics('ClickLive')">Sold</a></span><div class="startpriceestimates">Estimate : 200.00 - 300.00 </div><div class="gridView_winningbid linkinfo bidinfo" title="(Hammer Price) = Total">Sold to floor for 100.00</div><div class="datetime gridView_countdown"> </div><span class="gridView-buttons"><a class="gridView_DetailsButton" href="https://www.liveauctionworld.com/Donald-Trump-Fight-1oz-999-Fine-Silver-Coin_i57253305" title="Donald Trump Fight 1oz .999 Fine Silver Coin">Details...</a></span><span class="gridView-buttons"><a class="gridView_BookmarkButton" href="https://www.liveauctionworld.com/login.aspx?returnurl=http%3a%2f%2fwww.liveauctionworld.com%2fauction.aspx%3fas%3d109392" title="Sign-In to Bookmark Lot">Bookmark</a><span class="gridView_itemNotificationLink"></span></span></div><div class="gridItem" id="i57253306">
+<a class="row_thumbnail" href="https://www.liveauctionworld.com/Autographed-Pete-Rose-Baseball-PSA-Certified_i57253306" title="Autographed Pete Rose Baseball PSA Certified"><img alt="Autographed Pete Rose Baseball PSA Certified" class="gridView_thumbnail" src="https://dygtyjqp7pi0m.cloudfront.net/i/73509/57253306_1m.jpg?v=8DDC374A796A990"/></a><span class="gridView_heading"><a href="https://www.liveauctionworld.com/Autographed-Pete-Rose-Baseball-PSA-Certified_i57253306" title="Autographed Pete Rose Baseball PSA Certified"><span class="gridView_title"><i class="gridView_lotnum">39 - </i>Autographed Pete Rose Baseball PSA Certified</span></a></span><div class="auctioneer">Federal Assets Auctioneers</div><div class="description gridView_description">Autographed Pete Rose  Baseball PSA Certified. Excellent Condition! DX153MA. Signed Pete Rose baseball with  4256 hits and 0 Steroids written on the b</div><span class=""><a href="https://www.liveauctionworld.com/livebid.aspx?as=109392" onclick="lag.EmitAnalytics('ClickLive')">Sold</a></span><div class="startpriceestimates">Estimate : 750.00 - 900.00 </div><div class="gridView_winningbid linkinfo bidinfo" title="(Hammer Price) = Total">Sold to floor for 800.00</div><div class="datetime gridView_countdown"> </div><span class="gridView-buttons"><a class="gridView_DetailsButton" href="https://www.liveauctionworld.com/Autographed-Pete-Rose-Baseball-PSA-Certified_i57253306" title="Autographed Pete Rose Baseball PSA Certified">Details...</a></span><span class="gridView-buttons"><a class="gridView_BookmarkButton" href="https://www.liveauctionworld.com/login.aspx?returnurl=http%3a%2f%2fwww.liveauctionworld.com%2fauction.aspx%3fas%3d109392" title="Sign-In to Bookmark Lot">Bookmark</a><span class="gridView_itemNotificationLink"></span></span></div><div class="gridItem" id="i57253307">
+<a class="row_thumbnail" href="https://www.liveauctionworld.com/Vintage-14k-Yellow-Gold-6-8mm-Round-Pearl-Open-Flower-Frame-Screw-Back-Earrings_i57253307" title="Vintage 14k Yellow Gold 6.8mm Round Pearl Open Flower Frame Screw Back Earrings"><img alt="Vintage 14k Yellow Gold 6.8mm Round Pearl Open Flower Frame Screw Back Earrings" class="gridView_thumbnail" src="https://dygtyjqp7pi0m.cloudfront.net/i/73509/57253307_1m.jpg?v=8DDC374C230A8F0"/></a><span class="gridView_heading"><a href="https://www.liveauctionworld.com/Vintage-14k-Yellow-Gold-6-8mm-Round-Pearl-Open-Flower-Frame-Screw-Back-Earrings_i57253307" title="Vintage 14k Yellow Gold 6.8mm Round Pearl Open Flower Frame Screw Back Earrings"><span class="gridView_title"><i class="gridView_lotnum">40 - </i>Vintage 14k Yellow Gold 6.8mm Round Pearl Open Flower Frame Screw Back Earrings</span></a></span><div class="auctioneer">Federal Assets Auctioneers</div><div class="description gridView_description">A vintage solid 14k yellow gold earrings, with 2 round shape natural cultured pearls (6.8mm). The earrings measure approximately 14.70mm in diameter a</div><span class=""><a href="https://www.liveauctionworld.com/livebid.aspx?as=109392" onclick="lag.EmitAnalytics('ClickLive')">Sold</a></span><div class="startpriceestimates">Estimate : 800.00 - 1,000.00 </div><div class="gridView_winningbid linkinfo bidinfo" title="(Hammer Price) = Total">Sold to floor for 550.00</div><div class="datetime gridView_countdown"> </div><span class="gridView-buttons"><a class="gridView_DetailsButton" href="https://www.liveauctionworld.com/Vintage-14k-Yellow-Gold-6-8mm-Round-Pearl-Open-Flower-Frame-Screw-Back-Earrings_i57253307" title="Vintage 14k Yellow Gold 6.8mm Round Pearl Open Flower Frame Screw Back Earrings">Details...</a></span><span class="gridView-buttons"><a class="gridView_BookmarkButton" href="https://www.liveauctionworld.com/login.aspx?returnurl=http%3a%2f%2fwww.liveauctionworld.com%2fauction.aspx%3fas%3d109392" title="Sign-In to Bookmark Lot">Bookmark</a><span class="gridView_itemNotificationLink"></span></span></div><div class="gridItem" id="i57253308">
+<a class="row_thumbnail" href="https://www.liveauctionworld.com/2020-American-Silver-Eagle-999-Fine-Silver-Dollar-Coin_i57253308" title="2020 American Silver Eagle .999 Fine Silver Dollar Coin"><img alt="2020 American Silver Eagle .999 Fine Silver Dollar Coin" class="gridView_thumbnail" src="https://dygtyjqp7pi0m.cloudfront.net/i/73509/57253308_1m.jpg?v=8DDC374D5B24050"/></a><span class="gridView_heading"><a href="https://www.liveauctionworld.com/2020-American-Silver-Eagle-999-Fine-Silver-Dollar-Coin_i57253308" title="2020 American Silver Eagle .999 Fine Silver Dollar Coin"><span class="gridView_title"><i class="gridView_lotnum">41 - </i>2020 American Silver Eagle .999 Fine Silver Dollar Coin</span></a></span><div class="auctioneer">Federal Assets Auctioneers</div><div class="description gridView_description">One 2020 American Silver Eagle .999 Fine Silver Dollar Coin.</div><span class=""><a href="https://www.liveauctionworld.com/livebid.aspx?as=109392" onclick="lag.EmitAnalytics('ClickLive')">Sold</a></span><div class="startpriceestimates">Estimate : 120.00 - 150.00 </div><div class="gridView_winningbid linkinfo bidinfo" title="(Hammer Price) = Total">Sold to floor for 90.00</div><div class="datetime gridView_countdown"> </div><span class="gridView-buttons"><a class="gridView_DetailsButton" href="https://www.liveauctionworld.com/2020-American-Silver-Eagle-999-Fine-Silver-Dollar-Coin_i57253308" title="2020 American Silver Eagle .999 Fine Silver Dollar Coin">Details...</a></span><span class="gridView-buttons"><a class="gridView_BookmarkButton" href="https://www.liveauctionworld.com/login.aspx?returnurl=http%3a%2f%2fwww.liveauctionworld.com%2fauction.aspx%3fas%3d109392" title="Sign-In to Bookmark Lot">Bookmark</a><span class="gridView_itemNotificationLink"></span></span></div><div class="gridItem" id="i57253309">
+<a class="row_thumbnail" href="https://www.liveauctionworld.com/Donald-Trump-45th-President-1oz-999-Fine-Silver-Coin_i57253309" title="Donald Trump 45th President 1oz .999 Fine Silver Coin"><img alt="Donald Trump 45th President 1oz .999 Fine Silver Coin" class="gridView_thumbnail" src="https://dygtyjqp7pi0m.cloudfront.net/i/73509/57253309_1m.jpg?v=8DDC374EC199280"/></a><span class="gridView_heading"><a href="https://www.liveauctionworld.com/Donald-Trump-45th-President-1oz-999-Fine-Silver-Coin_i57253309" title="Donald Trump 45th President 1oz .999 Fine Silver Coin"><span class="gridView_title"><i class="gridView_lotnum">42 - </i>Donald Trump 45th President 1oz .999 Fine Silver Coin</span></a></span><div class="auctioneer">Federal Assets Auctioneers</div><div class="description gridView_description">This Donald Trump 45th President 1oz .999 Fine Silver Coin features a detailed profile of the 45th U.S. President, Donald J. Trump, in a formal salute</div><span class=""><a href="https://www.liveauctionworld.com/livebid.aspx?as=109392" onclick="lag.EmitAnalytics('ClickLive')">Sold</a></span><div class="startpriceestimates">Estimate : 200.00 - 300.00 </div><div class="gridView_winningbid linkinfo bidinfo" title="(Hammer Price) = Total">Sold to floor for 100.00</div><div class="datetime gridView_countdown"> </div><span class="gridView-buttons"><a class="gridView_DetailsButton" href="https://www.liveauctionworld.com/Donald-Trump-45th-President-1oz-999-Fine-Silver-Coin_i57253309" title="Donald Trump 45th President 1oz .999 Fine Silver Coin">Details...</a></span><span class="gridView-buttons"><a class="gridView_BookmarkButton" href="https://www.liveauctionworld.com/login.aspx?returnurl=http%3a%2f%2fwww.liveauctionworld.com%2fauction.aspx%3fas%3d109392" title="Sign-In to Bookmark Lot">Bookmark</a><span class="gridView_itemNotificationLink"></span></span></div><div class="gridItem" id="i57253310">
+<a class="row_thumbnail" href="https://www.liveauctionworld.com/Unveiled-Affection-by-Kostabi-Original_i57253310" title="Unveiled Affection by Kostabi Original"><img alt="Unveiled Affection by Kostabi Original" class="gridView_thumbnail" src="https://dygtyjqp7pi0m.cloudfront.net/i/73509/57253310_1m.jpg?v=8DDC375042E94B0"/></a><span class="gridView_heading"><a href="https://www.liveauctionworld.com/Unveiled-Affection-by-Kostabi-Original_i57253310" title="Unveiled Affection by Kostabi Original"><span class="gridView_title"><i class="gridView_lotnum">43 - </i>Unveiled Affection by Kostabi Original</span></a></span><div class="auctioneer">Federal Assets Auctioneers</div><div class="description gridView_description">"Unveiled Affection"is an original oil painting on canvas by Mark Kostabi, hand signed by the artist. This piece comes custom framed. Incl...</div><span class=""><a href="https://www.liveauctionworld.com/livebid.aspx?as=109392" onclick="lag.EmitAnalytics('ClickLive')">Sold</a></span><div class="startpriceestimates">Estimate : 9,400.00 - 10,900.00 </div><div class="gridView_winningbid linkinfo bidinfo" title="(Hammer Price) = Total">Sold to floor for 8,000.00</div><div class="datetime gridView_countdown"> </div><span class="gridView-buttons"><a class="gridView_DetailsButton" href="https://www.liveauctionworld.com/Unveiled-Affection-by-Kostabi-Original_i57253310" title="Unveiled Affection by Kostabi Original">Details...</a></span><span class="gridView-buttons"><a class="gridView_BookmarkButton" href="https://www.liveauctionworld.com/login.aspx?returnurl=http%3a%2f%2fwww.liveauctionworld.com%2fauction.aspx%3fas%3d109392" title="Sign-In to Bookmark Lot">Bookmark</a><span class="gridView_itemNotificationLink"></span></span></div><div class="gridItem" id="i57253311">
+<a class="row_thumbnail" href="https://www.liveauctionworld.com/Vintage-14k-Yellow-White-Gold-0-40-ctw-3-Stone-Illusion-Set-Round-Diamond-Ring_i57253311" title="Vintage 14k Yellow &amp; White Gold 0.40 ctw 3 Stone Illusion Set Round Diamond Ring"><img alt="Vintage 14k Yellow &amp; White Gold 0.40 ctw 3 Stone Illusion Set Round Diamond Ring" class="gridView_thumbnail" src="https://dygtyjqp7pi0m.cloudfront.net/i/73509/57253311_1m.jpg?v=8DDC3751DED7650"/></a><span class="gridView_heading"><a href="https://www.liveauctionworld.com/Vintage-14k-Yellow-White-Gold-0-40-ctw-3-Stone-Illusion-Set-Round-Diamond-Ring_i57253311" title="Vintage 14k Yellow &amp; White Gold 0.40 ctw 3 Stone Illusion Set Round Diamond Ring"><span class="gridView_title"><i class="gridView_lotnum">44 - </i>Vintage 14k Yellow &amp; White Gold 0.40 ctw 3 Stone Illusion Set Round Diamond Ring</span></a></span><div class="auctioneer">Federal Assets Auctioneers</div><div class="description gridView_description">A vintage solid 14k yellow and white gold three stones ring, with 1 round brilliant cut natural diamond (F/G - VS2/SI1 ; 0.20ct), and 2 round brillian</div><span class=""><a href="https://www.liveauctionworld.com/livebid.aspx?as=109392" onclick="lag.EmitAnalytics('ClickLive')">Sold</a></span><div class="startpriceestimates">Estimate : 2,200.00 - 2,600.00 </div><div class="gridView_winningbid linkinfo bidinfo" title="(Hammer Price) = Total">Sold to floor for 1,500.00</div><div class="datetime gridView_countdown"> </div><span class="gridView-buttons"><a class="gridView_DetailsButton" href="https://www.liveauctionworld.com/Vintage-14k-Yellow-White-Gold-0-40-ctw-3-Stone-Illusion-Set-Round-Diamond-Ring_i57253311" title="Vintage 14k Yellow &amp; White Gold 0.40 ctw 3 Stone Illusion Set Round Diamond Ring">Details...</a></span><span class="gridView-buttons"><a class="gridView_BookmarkButton" href="https://www.liveauctionworld.com/login.aspx?returnurl=http%3a%2f%2fwww.liveauctionworld.com%2fauction.aspx%3fas%3d109392" title="Sign-In to Bookmark Lot">Bookmark</a><span class="gridView_itemNotificationLink"></span></span></div><div class="gridItem" id="i57253312">
+<a class="row_thumbnail" href="https://www.liveauctionworld.com/Louis-Vuitton-Brown-Monogram-Saint-Cloud-MM-Cross-body-bag_i57253312" title="Louis Vuitton Brown Monogram Saint Cloud MM Cross body bag"><img alt="Louis Vuitton Brown Monogram Saint Cloud MM Cross body bag" class="gridView_thumbnail" src="https://dygtyjqp7pi0m.cloudfront.net/i/73509/57253312_1m.jpg?v=8DDC3753B826630"/></a><span class="gridView_heading"><a href="https://www.liveauctionworld.com/Louis-Vuitton-Brown-Monogram-Saint-Cloud-MM-Cross-body-bag_i57253312" title="Louis Vuitton Brown Monogram Saint Cloud MM Cross body bag"><span class="gridView_title"><i class="gridView_lotnum">45 - </i>Louis Vuitton Brown Monogram Saint Cloud MM Cross body bag</span></a></span><div class="auctioneer">Federal Assets Auctioneers</div><div class="description gridView_description">Louis Vuitton Brown Monogram Saint Cloud MM Cross body bag. All available information is listed in the description and shown in the photos. Louis Vuit</div><span class=""><a href="https://www.liveauctionworld.com/livebid.aspx?as=109392" onclick="lag.EmitAnalytics('ClickLive')">Sold</a></span><div class="startpriceestimates">Estimate : 1,900.00 - 2,200.00 </div><div class="gridView_winningbid linkinfo bidinfo" title="(Hammer Price) = Total">Sold to floor for 1,600.00</div><div class="datetime gridView_countdown"> </div><span class="gridView-buttons"><a class="gridView_DetailsButton" href="https://www.liveauctionworld.com/Louis-Vuitton-Brown-Monogram-Saint-Cloud-MM-Cross-body-bag_i57253312" title="Louis Vuitton Brown Monogram Saint Cloud MM Cross body bag">Details...</a></span><span class="gridView-buttons"><a class="gridView_BookmarkButton" href="https://www.liveauctionworld.com/login.aspx?returnurl=http%3a%2f%2fwww.liveauctionworld.com%2fauction.aspx%3fas%3d109392" title="Sign-In to Bookmark Lot">Bookmark</a><span class="gridView_itemNotificationLink"></span></span></div><div class="gridItem" id="i57253313">
+<a class="row_thumbnail" href="https://www.liveauctionworld.com/2020-American-Silver-Eagle-999-Fine-Silver-Dollar-Coin_i57253313" title="2020 American Silver Eagle .999 Fine Silver Dollar Coin"><img alt="2020 American Silver Eagle .999 Fine Silver Dollar Coin" class="gridView_thumbnail" src="https://dygtyjqp7pi0m.cloudfront.net/i/73509/57253313_1m.jpg?v=8DDC37550ED5700"/></a><span class="gridView_heading"><a href="https://www.liveauctionworld.com/2020-American-Silver-Eagle-999-Fine-Silver-Dollar-Coin_i57253313" title="2020 American Silver Eagle .999 Fine Silver Dollar Coin"><span class="gridView_title"><i class="gridView_lotnum">46 - </i>2020 American Silver Eagle .999 Fine Silver Dollar Coin</span></a></span><div class="auctioneer">Federal Assets Auctioneers</div><div class="description gridView_description">One 2020 American Silver Eagle .999 Fine Silver Dollar Coin.</div><span class=""><a href="https://www.liveauctionworld.com/livebid.aspx?as=109392" onclick="lag.EmitAnalytics('ClickLive')">Sold</a></span><div class="startpriceestimates">Estimate : 120.00 - 150.00 </div><div class="gridView_winningbid linkinfo bidinfo" title="(Hammer Price) = Total">Sold to floor for 90.00</div><div class="datetime gridView_countdown"> </div><span class="gridView-buttons"><a class="gridView_DetailsButton" href="https://www.liveauctionworld.com/2020-American-Silver-Eagle-999-Fine-Silver-Dollar-Coin_i57253313" title="2020 American Silver Eagle .999 Fine Silver Dollar Coin">Details...</a></span><span class="gridView-buttons"><a class="gridView_BookmarkButton" href="https://www.liveauctionworld.com/login.aspx?returnurl=http%3a%2f%2fwww.liveauctionworld.com%2fauction.aspx%3fas%3d109392" title="Sign-In to Bookmark Lot">Bookmark</a><span class="gridView_itemNotificationLink"></span></span></div><div class="gridItem" id="i57253314">
+<a class="row_thumbnail" href="https://www.liveauctionworld.com/Untitled-by-Cook-Original_i57253314" title="Untitled by Cook Original"><img alt="Untitled by Cook Original" class="gridView_thumbnail" src="https://dygtyjqp7pi0m.cloudfront.net/i/73509/57253314_1m.jpg?v=8DDC3756AF353C0"/></a><span class="gridView_heading"><a href="https://www.liveauctionworld.com/Untitled-by-Cook-Original_i57253314" title="Untitled by Cook Original"><span class="gridView_title"><i class="gridView_lotnum">47 - </i>Untitled by Cook Original</span></a></span><div class="auctioneer">Federal Assets Auctioneers</div><div class="description gridView_description">This is an original acrylic painting on paper by Jenik Cook. Hand signed by the artist, it includes Letter of Authenticity. This piece comes from the </div><span class=""><a href="https://www.liveauctionworld.com/livebid.aspx?as=109392" onclick="lag.EmitAnalytics('ClickLive')">Passed</a></span><div class="startpriceestimates">Estimate : 900.00 - 1,100.00 </div><div class="gridView_winningbid"> </div><div class="datetime gridView_countdown"> </div><span class="gridView-buttons"><a class="gridView_DetailsButton" href="https://www.liveauctionworld.com/Untitled-by-Cook-Original_i57253314" title="Untitled by Cook Original">Details...</a></span><span class="gridView-buttons"><a class="gridView_BookmarkButton" href="https://www.liveauctionworld.com/login.aspx?returnurl=http%3a%2f%2fwww.liveauctionworld.com%2fauction.aspx%3fas%3d109392" title="Sign-In to Bookmark Lot">Bookmark</a><span class="gridView_itemNotificationLink"></span></span></div><div class="gridItem" id="i57253315">
+<a class="row_thumbnail" href="https://www.liveauctionworld.com/Vintage-18k-Gold-Cabochon-Jade-Ruby-Textured-Open-Wire-Work-Swan-Bird-Brooch-Pin_i57253315" title="Vintage 18k Gold Cabochon Jade Ruby Textured Open Wire Work Swan Bird Brooch Pin"><img alt="Vintage 18k Gold Cabochon Jade Ruby Textured Open Wire Work Swan Bird Brooch Pin" class="gridView_thumbnail" src="https://dygtyjqp7pi0m.cloudfront.net/i/73509/57253315_1m.jpg?v=8DDC37585E02E10"/></a><span class="gridView_heading"><a href="https://www.liveauctionworld.com/Vintage-18k-Gold-Cabochon-Jade-Ruby-Textured-Open-Wire-Work-Swan-Bird-Brooch-Pin_i57253315" title="Vintage 18k Gold Cabochon Jade Ruby Textured Open Wire Work Swan Bird Brooch Pin"><span class="gridView_title"><i class="gridView_lotnum">48 - </i>Vintage 18k Gold Cabochon Jade Ruby Textured Open Wire Work Swan Bird Brooch Pin</span></a></span><div class="auctioneer">Federal Assets Auctioneers</div><div class="description gridView_description">A vintage solid 18k yellow gold bird brooch, with 1 oval cabochon cut natural jade (15.5x12.2mm), and 1 round brilliant cut natural ruby (0.03ct). Mea</div><span class=""><a href="https://www.liveauctionworld.com/livebid.aspx?as=109392" onclick="lag.EmitAnalytics('ClickLive')">Sold</a></span><div class="startpriceestimates">Estimate : 3,200.00 - 3,700.00 </div><div class="gridView_winningbid linkinfo bidinfo" title="(Hammer Price) = Total">Sold to floor for 2,750.00</div><div class="datetime gridView_countdown"> </div><span class="gridView-buttons"><a class="gridView_DetailsButton" href="https://www.liveauctionworld.com/Vintage-18k-Gold-Cabochon-Jade-Ruby-Textured-Open-Wire-Work-Swan-Bird-Brooch-Pin_i57253315" title="Vintage 18k Gold Cabochon Jade Ruby Textured Open Wire Work Swan Bird Brooch Pin">Details...</a></span><span class="gridView-buttons"><a class="gridView_BookmarkButton" href="https://www.liveauctionworld.com/login.aspx?returnurl=http%3a%2f%2fwww.liveauctionworld.com%2fauction.aspx%3fas%3d109392" title="Sign-In to Bookmark Lot">Bookmark</a><span class="gridView_itemNotificationLink"></span></span></div><div class="gridItem" id="i57253316">
+<a class="row_thumbnail" href="https://www.liveauctionworld.com/Autographed-Pete-Rose-Baseball-Bat_i57253316" title="Autographed Pete Rose Baseball Bat"><img alt="Autographed Pete Rose Baseball Bat" class="gridView_thumbnail" src="https://dygtyjqp7pi0m.cloudfront.net/i/73509/57253316_1m.jpg?v=8DDC375B50D0DC0"/></a><span class="gridView_heading"><a href="https://www.liveauctionworld.com/Autographed-Pete-Rose-Baseball-Bat_i57253316" title="Autographed Pete Rose Baseball Bat"><span class="gridView_title"><i class="gridView_lotnum">49 - </i>Autographed Pete Rose Baseball Bat</span></a></span><div class="auctioneer">Federal Assets Auctioneers</div><div class="description gridView_description">Autographed Pete Rose Baseball Bat. Pete Rose had 4256 hits in his 24 year career with the Reds, Phillies, and the Expos. Pete won 3 World Series Titl</div><span class=""><a href="https://www.liveauctionworld.com/livebid.aspx?as=109392" onclick="lag.EmitAnalytics('ClickLive')">Sold</a></span><div class="startpriceestimates">Estimate : 750.00 - 900.00 </div><div class="gridView_winningbid linkinfo bidinfo" title="(Hammer Price) = Total">Sold to floor for 800.00</div><div class="datetime gridView_countdown"> </div><span class="gridView-buttons"><a class="gridView_DetailsButton" href="https://www.liveauctionworld.com/Autographed-Pete-Rose-Baseball-Bat_i57253316" title="Autographed Pete Rose Baseball Bat">Details...</a></span><span class="gridView-buttons"><a class="gridView_BookmarkButton" href="https://www.liveauctionworld.com/login.aspx?returnurl=http%3a%2f%2fwww.liveauctionworld.com%2fauction.aspx%3fas%3d109392" title="Sign-In to Bookmark Lot">Bookmark</a><span class="gridView_itemNotificationLink"></span></span></div><div class="gridItem" id="i57253317">
+<a class="row_thumbnail" href="https://www.liveauctionworld.com/Vintage-14k-White-Gold-1-28-ctw-GIA-Round-Sapphire-Marquise-Diamond-Accents-Ri_i57253317" title="Vintage 14k White Gold 1.28 ctw GIA Round Sapphire &amp; Marquise Diamond Accents Ri"><img alt="Vintage 14k White Gold 1.28 ctw GIA Round Sapphire &amp; Marquise Diamond Accents Ri" class="gridView_thumbnail" src="https://dygtyjqp7pi0m.cloudfront.net/i/73509/57253317_1m.jpg?v=8DDC375D1820EB0"/></a><span class="gridView_heading"><a href="https://www.liveauctionworld.com/Vintage-14k-White-Gold-1-28-ctw-GIA-Round-Sapphire-Marquise-Diamond-Accents-Ri_i57253317" title="Vintage 14k White Gold 1.28 ctw GIA Round Sapphire &amp; Marquise Diamond Accents Ri"><span class="gridView_title"><i class="gridView_lotnum">50 - </i>Vintage 14k White Gold 1.28 ctw GIA Round Sapphire &amp; Marquise Diamond Accents Ri</span></a></span><div class="auctioneer">Federal Assets Auctioneers</div><div class="description gridView_description">A vintage solid 14k white gold ring, with 1 GIA certified round brilliant cut natural sapphire (0.98ct ), and 2 marquise cut natural diamonds (G/H - V</div><span class=""><a href="https://www.liveauctionworld.com/livebid.aspx?as=109392" onclick="lag.EmitAnalytics('ClickLive')">Sold</a></span><div class="startpriceestimates">Estimate : 4,100.00 - 4,800.00 </div><div class="gridView_winningbid linkinfo bidinfo" title="(Hammer Price) = Total">Sold to floor for 3,250.00</div><div class="datetime gridView_countdown"> </div><span class="gridView-buttons"><a class="gridView_DetailsButton" href="https://www.liveauctionworld.com/Vintage-14k-White-Gold-1-28-ctw-GIA-Round-Sapphire-Marquise-Diamond-Accents-Ri_i57253317" title="Vintage 14k White Gold 1.28 ctw GIA Round Sapphire &amp; Marquise Diamond Accents Ri">Details...</a></span><span class="gridView-buttons"><a class="gridView_BookmarkButton" href="https://www.liveauctionworld.com/login.aspx?returnurl=http%3a%2f%2fwww.liveauctionworld.com%2fauction.aspx%3fas%3d109392" title="Sign-In to Bookmark Lot">Bookmark</a><span class="gridView_itemNotificationLink"></span></span></div></div></span>
+<div><span id="cphBody_PagingBar_Bottom"><div class="pagingbar"><span class="pagingbar_prev"></span><span class="pagingbar_size"><small># Rows</small><a class="pagingbar-size-10" href="https://www.liveauctionworld.com/FAA-Mid-July-Jewelry-Art-Auction_as109392?ps=10" rel="nofollow" title="View 10 Results Per Page">10</a><a class="pagingbar-size-20" href="https://www.liveauctionworld.com/FAA-Mid-July-Jewelry-Art-Auction_as109392?ps=20" rel="nofollow" title="View 20 Results Per Page">20</a><a class="pagingbar-size-50 active" href="https://www.liveauctionworld.com/FAA-Mid-July-Jewelry-Art-Auction_as109392?ps=50" rel="nofollow" title="View 50 Results Per Page">50</a><a class="pagingbar-size-100" href="https://www.liveauctionworld.com/FAA-Mid-July-Jewelry-Art-Auction_as109392?ps=100" rel="nofollow" title="View 100 Results Per Page">100</a></span><span class="pagingbar_next"><a href="https://www.liveauctionworld.com/FAA-Mid-July-Jewelry-Art-Auction_as109392_p2">Next &gt;</a></span><span class="pagingbar_pages"><a class="active" href="https://www.liveauctionworld.com/FAA-Mid-July-Jewelry-Art-Auction_as109392">1</a><a href="https://www.liveauctionworld.com/FAA-Mid-July-Jewelry-Art-Auction_as109392_p2">2</a><a href="https://www.liveauctionworld.com/FAA-Mid-July-Jewelry-Art-Auction_as109392_p3">3</a><a href="https://www.liveauctionworld.com/FAA-Mid-July-Jewelry-Art-Auction_as109392_p4">4</a><a href="https://www.liveauctionworld.com/FAA-Mid-July-Jewelry-Art-Auction_as109392_p5">5</a><a href="https://www.liveauctionworld.com/FAA-Mid-July-Jewelry-Art-Auction_as109392_p6">6</a><a href="https://www.liveauctionworld.com/FAA-Mid-July-Jewelry-Art-Auction_as109392_p7">7</a><a href="https://www.liveauctionworld.com/FAA-Mid-July-Jewelry-Art-Auction_as109392_p8">8</a><span>. . .</span><a href="https://www.liveauctionworld.com/FAA-Mid-July-Jewelry-Art-Auction_as109392_p18">18</a><a href="https://www.liveauctionworld.com/FAA-Mid-July-Jewelry-Art-Auction_as109392_p19">19</a><a href="https://www.liveauctionworld.com/FAA-Mid-July-Jewelry-Art-Auction_as109392_p20">20</a></span></div></span></div>
+</div>
+</div>
+</div>
+<div class="cside">
+<div class="sidebox sidebox_bg_gray" id="auction_action">
+
+			
+
+				Want to bid in this Auction?<br/>
+
+				get approved now...<br/>
+<a class="boxlink" href="signup.aspx?a=73509&amp;returnurl=%2fauction.aspx%3fas%3d109392" style="font-size: 11pt;"><img alt="" src="graphics/icons/signup.gif"/>Get Approved to Bid</a>
+<div>You need to be approved for an auction to participate &amp; bid on its lots.</div>
+<br/>
+<a class="boxlink livenow" href="livebid.aspx?as=109392" onclick="lag.EmitAnalytics('ClickLive')">Live Now</a>
+<div>Live Auction in progress... Click to join!</div>
+</div>
+<div class="sidebox sidebox_bg_yellow" id="auction_session_sideinfo">
+
+			1000 Lots in this Session
+
+			<div class="stopper"></div>
+</div>
+<div class="sidebox sidebox_bg_gray" id="auction_phone_numbers">
+<strong>Auction Phone: (866) 392-6229</strong>
+<div class="stopper"></div>
+</div>
+<div class="sidebox auction_session_search" id="cphBody_divFindLot">
+<input id="txtFindLot" type="text"/><input class="boxlink" id="btnFindLot" type="button" value="Search by Lot Number"/>
+</div>
+<div class="sidebox auction_session_search">
+<div>
+<select id="cphBody_ddlSortOrder" name="ctl00$cphBody$ddlSortOrder">
+<option value="1">Sort by Lot/Sale Order Ascending</option>
+<option value="2">Sort by Lot/Sale Order Descending</option>
+<option value="3">Sort by Start Price Ascending</option>
+<option value="4">Sort by Start Price Descending</option>
+<option value="5">Sort by Estimates Ascending</option>
+<option value="6">Sort by Estimates Descending</option>
+<option value="7">Sort by Bid Amount Ascending</option>
+<option value="8">Sort by Bid Amount Descending</option>
+<option value="9">Sort by Bookmarks Ascending</option>
+<option value="10">Sort by Bookmarks Descending</option>
+<option value="11">Sort by Hits Ascending</option>
+<option value="12">Sort by Hits Descending</option>
+</select>
+<div id="searchCategories">
+<select id="ddlSearchCategories">
+<option disabled="disabled" selected="selected" value="0">Filter by Category</option>
+</select>
+</div>
+</div>
+<div id="divSearchLots">
+<input id="txtSearch" maxlength="50" onfocus="clearTextBox(this,true);" type="text"/>
+<input class="boxlink" id="btnSearch" type="button" value="Search List"/>
+<div>
+<label class="searchSectionFont" id="lblHasImage"><input id="chkHasImage" onclick="setHasImage(this.checked)" type="checkbox"/> Has at least 1 image</label>
+</div>
+</div>
+</div>
+<div class="sidebox sidebox_bg_gray sharewidget">
+<div class="sharewidget-container" id="cphBody_shareWidget">
+<div id="fb-root"></div>
+<div class="fb-share-button" data-action="share" data-layout="button" data-size="small" data-width="50"></div>
+<a class="twitter-share-button" data-show-count="false" href="https://twitter.com/share?ref_src=twsrc%5Etfw">Tweet</a>
+<a class="sharewidget-native" onclick="navigator.share &amp;&amp; navigator.share({title: document.title, url: document.location.href})"><img alt="Share" src="graphics/icons/share-widget.png"/></a>
+<div style="clear:both"></div>
+</div>
+<div class="stopper"></div>
+</div>
+<div class="sidebox" id="auction_infolinks">
+<div class="stopper"></div>
+<a class="boxlink thickbox auction_infolinks-preview" href="auctioninfo.aspx?as=109392&amp;s_preview=true&amp;TB_iframe=true&amp;height=500&amp;width=600" title="Auction Preview Instructions">View Preview Instructions</a>
+<div id="cphBody_pnlShowBidIncrements">
+<a class="boxlink thickbox auction_infolinks-increments" href="auctioninfo.aspx?as=109392&amp;s_increments=true&amp;TB_iframe=true&amp;height=500&amp;width=600" title="Auction Bidding Increments">View Bidding Increments</a>
+</div>
+<a class="boxlink thickbox auction_infolinks-fees" href="auctioninfo.aspx?as=109392&amp;s_premiums=true&amp;s_taxes=true&amp;s_fees=true&amp;TB_iframe=true&amp;height=500&amp;width=600" title="Auction Premiums/Taxes/Fees">View Premiums/Taxes/Fees</a>
+<a class="boxlink thickbox auction_infolinks-payment" href="auctioninfo.aspx?as=109392&amp;s_payment=true&amp;s_shipping=true&amp;TB_iframe=true&amp;height=500&amp;width=600" title="Auction Payment &amp; Shipping Info">View Payment &amp; Shipping Info</a>
+<a class="boxlink thickbox auction_infolinks-terms" href="auctioninfo.aspx?a=73509&amp;s_terms=true&amp;TB_iframe=true&amp;height=500&amp;width=600" title="Auction Terms &amp; Conditions">View Terms &amp; Conditions</a>
+<a class="boxlink disabled auction_infolinks-print" onclick="alert('You need to be logged in to view the Printable Lots Listing.'); ">Printable Lots Listing</a>
+<div class="stopper"></div>
+</div>
+<div class="sidebox" id="cphBody_ucAuctioneerSidePanel_divAskQuestion">
+<div class="stopper"></div>
+<a class="boxlink thickbox" href="auctioneercontact.aspx?a=73509&amp;i=0&amp;TB_iframe=true&amp;height=420&amp;width=600&amp;modal=true" title="Contact Auctioneer">
+<img alt="Ask Question" src="https://www.liveauctionworld.com/graphics/icons/question.gif" style="width: 30px;"/>
+
+		Ask Auctioneer a Question...
+
+	</a>
+<div class="stopper"></div>
+</div>
+<div class="sidebox sidebox_solidbottom" id="cphBody_ucAuctioneerSidePanel_divContainer">
+<a href="https://www.liveauctionworld.com/Federal-Assets-Auctioneers_ae2294" style="text-decoration:none; color:#666; font-weight:bold; font-size:10pt;" title="Federal Assets Auctioneers"><img alt="Federal Assets Auctioneers" id="cphBody_ucAuctioneerSidePanel_imgAuctioneerLogo" src="https://dygtyjqp7pi0m.cloudfront.net/ae/2294m.png?v=8DA68DA15BFD840" style="display:block; margin:0 auto 10px; width:200px; height:60px;"/>Federal Assets Auctioneers</a>
+<span style="display:block; margin:5px 0 20px; color:#999; font-weight: normal; font-size: 11px;">Camarillo, California, United States</span>
+<span style="display:block; margin:5px 0 20px; color:#666; font-weight: bold; font-size: 14px;">866-392-6229</span>
+<a href="https://www.liveauctionworld.com/Federal-Assets-Auctioneers_ae2294" style="display:block; font-weight:bold; margin-bottom:5px; font-size:8pt; text-decoration:none;">About Auctioneer...</a>
+<a href="auctionlist.aspx?ae=2294" style="display:block; font-weight:bold; font-size:8pt; text-decoration:none;">Auctioneer's Auctions...</a>
+<!--<a id="cphBody_ucAuctioneerSidePanel_hlSubscribeAuctioneer" title="Federal Assets Auctioneers" class="boxlink" href="login.aspx?returnurl=http://www.liveauctionworld.com/auction.aspx?as=109392">Subscribe to Auctioneer's News</a>-->
+<!--<a id="cphBody_ucAuctioneerSidePanel_hlSubscribeCategorySelect">Subscribe to Category News</a>-->
+<div class="stopper"></div>
+</div>
+<!--<div id="auction_misclinks" class="sidebox sidebox_solidbottom">
+
+			<div class="stopper"></div>
+
+			<a href="" class="boxlink">Find Similar Auctions</a>
+
+			<a href="" class="boxlink">Set Auction Reminder</a>
+
+			<a href="" class="boxlink">Email To A Friend</a>
+
+			<a href="" class="boxlink">Download Auction (PDF)</a>
+
+			<a href="" class="boxlink">Download Auction (Excel)</a>
+
+			<div class="stopper"></div>
+
+		</div>-->
+<div class="sidebox sidebox_solidtop sidebox_solidbottom" id="recentlyViewedItemsContainer" style="display:none">
+<div class="recentitems">
+<h4>Recently Viewed Lots</h4>
+<span id="recentlyViewedItemsContainer-list"></span>
+</div>
+<script type="text/javascript">
+
+        (function () {
+
+            lag.ShimLocalStorage();
+
+
+
+            var storageKey = 'recentitems';
+
+            var siteRootUrl = 'https://www.liveauctionworld.com/';
+
+            var noImgUrl = 'https://dygtyjqp7pi0m.cloudfront.net/noimage_s.jpg';
+
+            var imgBaseUrl = 'https://dygtyjqp7pi0m.cloudfront.net/';
+
+
+
+            // ---------------------------------------------------
+
+            // Check for recently viewed items and output them.
+
+
+
+            var items = JSON.parse(localStorage.getItem(storageKey));
+
+
+
+            if (items && items.length) {
+
+                var recentlyViewedItemsContainerList = $("#recentlyViewedItemsContainer-list");
+
+
+
+                for (var i = 0; i < items.length; ++i) {
+
+                    var item = items[i];
+
+                    var href = siteRootUrl + genFriendlyURL({ ItemID: item.itemId, ItemTitle: item.title });
+
+                    var titleShort = item.title.length <= 100 ? item.title : item.title.substr(0, 95) + '...';
+
+                    var imgsrc = item.imageCount > 0 || (item.itemThumbnail != undefined && item.itemThumbnail.length > 0)  ? generateImageURL(1, item.dateUpdated, item.auctionId, item.itemId, imgBaseUrl, undefined, item.itemThumbnail) : noImgUrl;
+
+
+
+                    recentlyViewedItemsContainerList.append(
+
+                        "<a href='" + href + "' title='" + item.title + "'><img src='" + imgsrc + "' alt='" + item.title + "' />" + titleShort + "</a>");
+
+                }
+
+
+
+                $("#recentlyViewedItemsContainer").show();
+
+            }
+
+
+
+            // ---------------------------------------------------
+
+            // If new item is viewed add to recently viewed items.
+
+
+
+            items = items || [];
+
+
+
+            function hasItemId(itemsArray, id) {
+
+                for (var i = 0; i < itemsArray.length; ++i) {
+
+                    if (itemsArray[i].itemId === id) return true;
+
+                }
+
+                return false;
+
+            }
+
+
+
+            var newItem = null;
+
+            if (!newItem || !newItem.itemId || hasItemId(items, newItem.itemId))
+
+                return;
+
+
+
+            items.push(newItem); // Add new one.
+
+            while (items.length > 5) items.shift(); // Remove first (oldest).
+
+
+
+            localStorage.setItem(storageKey, JSON.stringify(items));
+
+        })();
+
+    </script>
+</div>
+</div>
+</div>
+<div style="clear:both;"></div></div>
+<div id="footer">
+<div id="footer_content">
+<div id="footer_content_links">
+<ul class="columns">
+<li>
+<header>About Live Auction World</header>
+<a href="https://www.liveauctionworld.com/about.aspx">About Us</a>
+<a href="https://www.liveauctionworld.com/help.aspx">Help</a>
+<a href="https://www.liveauctionworld.com/contact.aspx">Contact Us</a>
+<a href="https://www.liveauctionworld.com/?mobile=1">Mobile Site</a>
+</li>
+<li>
+<header>Services</header>
+<a href="https://www.liveauctionworld.com/login.aspx">Bidder Sign-In</a>
+<a href="https://www.liveauctionworld.com/search.aspx">Search Lots</a>
+<a href="https://www.liveauctionworld.com/auctionlist.aspx">Browse Auctions</a>
+<a href="https://www.liveauctionworld.com/auctionmap.aspx">Auction Map</a>
+<a href="https://www.liveauctionworld.com/account/auctionbutler.aspx">Auction Butler</a>
+<a href="https://www.liveauctionworld.com/auctioneerlist.aspx">Auctioneers List</a>
+</li>
+<li>
+<header>Follow Us</header>
+<a href="https://www.facebook.com/liveauctionworld" target="_blank" title="Become a fan on Facebook">Facebook</a>
+<a href="https://twitter.com/auctiongroup" target="_blank" title="Follow us on Twitter">Twitter</a>
+<a href="https://www.instagram.com/liveauctionworld" target="_blank" title="Follow us on Instagram">Instagram</a>
+</li>
+<li class="footer_calltoactions">
+<a href="https://www.liveauctionworld.com/register.aspx">Become a Bidder</a>
+<a href="https://info.liveauctionworld.com" target="_blank">Become a Seller</a>
+<a class="adminlink" href="http://admin.liveauctiongroup.com/" target="_blank">Auctioneer Login</a>
+</li>
+<li class="footer_side">
+<div class="footer_newsletter"><a onclick="openNewsletterPopup(); return false;" title="Subscribe to our Newsletter"><img alt="Newsletter" src="https://www.liveauctionworld.com/graphics/button_newsletter.png"/></a></div>
+<div class="footer_poweredby"><span id="poweredbyLAG" style="color:#666666;"><div style="display:inline-block;width:176px;text-align:right;"><a href="https://www.liveauctiongroup.com/" title="Live Auction Software"><img alt="Live Auction Software" src="https://www.liveauctionworld.com/graphics/poweredby_lag.png" style="border:none;"/></a><br/><a href="https://www.liveauctiongroup.com/" style="padding-right:10px;font-family:arial,verdana,helvetica;font-size:10px;text-align:right;text-decoration:none;color:rgb(102,102,102);" title="Live Auction Software">Live Auction Software</a><br/><br/><a href="https://www.auctionmanagementsoftware.com/" title="Auction Management Software"><img alt="Auction Management Software" src="https://www.liveauctionworld.com/graphics/poweredby_ams.png" style="border:none;"/></a><br/><a href="https://www.auctionmanagementsoftware.com/" style="padding-right:10px;font-family:arial,verdana,helvetica;font-size:10px;text-align:right;text-decoration:none;color:rgb(102,102,102);" title="Auction Management Software">Auction Management Software</a></div></span></div>
+</li>
+</ul>
+</div>
+<div id="footer_content_legal">
+<span class="footer_content_policy"><a href="https://www.liveauctionworld.com/policy.aspx" target="_blank">User Agreement &amp; Privacy Policy</a></span>
+<span class="footer_content_copyright">Copyright 1996 - 2025 ©  Live Auction World</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+
+//<![CDATA[
+
+$(function(){initCountdowns('https://www.liveauctionworld.com/');});//]]>
+
+</script>
+<script type="text/javascript">
+
+function sharewidget_loadscriptasync(script_src)
+
+{
+
+	var e = document.createElement('script');
+
+	e.type = 'text/javascript';
+
+	e.async = true;
+
+    e.defer = true;
+
+    e.crossorigin = 'anonymous';
+
+	e.src = script_src;
+
+	var s = document.getElementsByTagName('script')[0];
+
+	s.parentNode.insertBefore(e, s);
+
+}
+
+
+
+document.querySelector('.fb-share-button').setAttribute('data-href', encodeURI(document.location.href));
+
+
+
+sharewidget_loadscriptasync('//platform.twitter.com/widgets.js');
+
+sharewidget_loadscriptasync('//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v18.0&appId=256361631233399');
+
+sharewidget_loadscriptasync('js/navigator-share-polyfill-1-1-1.min.js');
+
+</script><script type="text/javascript">_qevents.push( {qacct:'p-98yDqblmeVxSk'} );</script>
+<noscript><div style="display:none;"><img alt="Quantcast" height="1" src="//pixel.quantserve.com/pixel/p-98yDqblmeVxSk.gif" width="1"/></div></noscript></form>
+<script src="https://www.liveauctionworld.com/js/jquery.thickbox.js" type="text/javascript"></script>
+<script>
+
+        $(function () {
+
+            // requires jquery and thickbox
+
+            initAutoPopups(
+
+                false,
+
+                "https://www.liveauctionworld.com/subscribe.aspx",
+
+                "https://www.liveauctionworld.com/signupprompt.aspx?returnurl=https%3a%2f%2fwww.liveauctionworld.com%2fauction.aspx%3fas%3d109392");
+
+        });
+
+    </script>
+</body>
+</html>
